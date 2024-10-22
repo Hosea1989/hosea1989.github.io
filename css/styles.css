@@ -1029,3 +1029,63 @@ body {
     background-image: linear-gradient(45deg, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
     background-size: 1rem 1rem;
 }
+
+.small-welcome {
+    font-size: 0.8rem; /* Adjust this value as needed */
+}
+
+.modal-body {
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.modal-body img {
+    max-width: 80%; /* Adjust this value as needed */
+    height: auto;
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal-body p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.modal-body h4 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-align: center; /* This centers the text */
+}
+
+.modal-body .ratio {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.modal-title {
+    width: 100%;
+    text-align: center;
+}
+
+.modal-header {
+    display: block;
+}
+
+.modal-header .btn-close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+.modal-body h4:last-of-type {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.card-img-top {
+    height: 200px; /* Adjust this value as needed */
+    object-fit: cover;
+}

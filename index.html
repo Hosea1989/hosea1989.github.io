@@ -70,68 +70,12 @@
         <section id="featured-projects" class="featured-projects py-5">
             <div class="container">
                 <h2 class="text-center mb-4 text-primary">Featured Projects</h2>
-                <div class="row">
-                    <!-- Project 1 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card bg-dark text-light">
-                            <img src="img/project1.jpg" class="card-img-top" alt="Project 1">
-                            <div class="card-body">
-                                <h5 class="card-title text-primary">Project 1</h5>
-                                <p class="card-text">Brief description of Project 1</p>
-                                <a href="#" class="btn btn-outline-primary">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Project 2 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card bg-dark text-light">
-                            <img src="img/project2.jpg" class="card-img-top" alt="Project 2">
-                            <div class="card-body">
-                                <h5 class="card-title text-primary">Project 2</h5>
-                                <p class="card-text">Brief description of Project 2</p>
-                                <a href="#" class="btn btn-outline-primary">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Project 3 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card bg-dark text-light">
-                            <img src="img/project3.jpg" class="card-img-top" alt="Project 3">
-                            <div class="card-body">
-                                <h5 class="card-title text-primary">Project 3</h5>
-                                <p class="card-text">Brief description of Project 3</p>
-                                <a href="#" class="btn btn-outline-primary">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="row" id="featured-projects-container">
+                    <!-- Projects will be dynamically inserted here -->
                 </div>
             </div>
         </section>
 
-        <!-- Skills Overview Section -->
-        <section class="skills-overview py-5">
-            <div class="container">
-                <h2 class="text-center mb-4 text-primary">My Skills</h2>
-                <div class="row text-center">
-                    <div class="col-md-3 mb-3">
-                        <i class="fas fa-code fa-3x mb-3 text-primary"></i>
-                        <h4 class="text-light">Web Development</h4>
-                    </div>
-                    <div class="col-md-3 mb-3">
-                        <i class="fas fa-mobile-alt fa-3x mb-3 text-primary"></i>
-                        <h4 class="text-light">Mobile Development</h4>
-                    </div>
-                    <div class="col-md-3 mb-3">
-                        <i class="fas fa-paint-brush fa-3x mb-3 text-primary"></i>
-                        <h4 class="text-light">UI/UX Design</h4>
-                    </div>
-                    <div class="col-md-3 mb-3">
-                        <i class="fas fa-database fa-3x mb-3 text-primary"></i>
-                        <h4 class="text-light">Database Management</h4>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- Favorite Developer Tools Section -->
         <section class="developer-tools py-5">
@@ -221,5 +165,7 @@
     <!-- Custom JS -->
     <script src="js/scripts.js"></script>
     <script src="js/current-game.js"></script>
+    <script src="js/projects-data.js"></script>
+    <script src="js/render-projects.js"></script>
 </body>
 </html>

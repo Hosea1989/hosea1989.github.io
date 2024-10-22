@@ -78,4 +78,17 @@ $(function(){
 
     // Also update immediately when the page loads
     document.addEventListener('DOMContentLoaded', updateHeaderQuote);
+
+    // Add this to your existing scripts.js file
+    $(document).ready(function() {
+        $('#articleModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget);
+            var title = button.data('title');
+            var contentId = button.data('content-id');
+            var content = $('#' + contentId).html();
+            var modal = $(this);
+            modal.find('.modal-title').text(title);
+            modal.find('.modal-body').html(content);
+        });
+    });
 });
