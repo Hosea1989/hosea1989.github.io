@@ -1,0 +1,862 @@
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #4a90e2, 0 0 10px #4a90e2, 0 0 15px #4a90e2, 0 0 20px #4a90e2;
+    }
+    50% {
+        text-shadow: 0 0 10px #4a90e2, 0 0 20px #4a90e2, 0 0 30px #4a90e2, 0 0 40px #4a90e2;
+    }
+    100% {
+        text-shadow: 0 0 5px #4a90e2, 0 0 10px #4a90e2, 0 0 15px #4a90e2, 0 0 20px #4a90e2;
+    }
+}
+
+.hero {
+    position: relative;
+    background-color: #1a1a1a;
+    color: #fff;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 5px 15px rgb(0, 0, 0);
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent);
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero .btn-primary {
+    font-size: 1.2rem;
+    padding: 0.75rem 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.hero .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(74, 144, 226, 0.5);
+}
+
+/* Navbar styles */
+.navbar-nav .nav-item .nav-link {
+    position: relative;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover,
+.navbar-nav .nav-item .nav-link.active {
+    color: #007bff;
+}
+
+.navbar-nav .nav-item .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #007bff;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-item .nav-link:hover::after,
+.navbar-nav .nav-item .nav-link.active::after {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+/* Skills page styles */
+.skill-bar {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.skill-name {
+    font-weight: bold;
+    color: #333;
+}
+
+.skill-level {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.progress {
+    height: 20px;
+    background-color: #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background-color: #007bff;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Add a glow effect on hover */
+.skill-bar:hover .progress-bar {
+    box-shadow: 0 0 10px #007bff;
+}
+
+.stat-sheet {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border: 2px solid #4a90e2;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px; /* Increased from 500px */
+    margin: 0 auto;
+}
+
+.stat-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    flex: 0 0 150px;
+    font-weight: bold;
+    color: #4a90e2;
+    display: flex;
+    align-items: center;
+}
+
+.stat-label i {
+    width: 25px; /* Slightly increased */
+    text-align: center;
+    margin-right: 10px;
+}
+
+.stat-value {
+    color: #fff;
+}
+
+.progress {
+    flex-grow: 1;
+    margin: 0 10px;
+    height: 20px;
+    background-color: #333;
+}
+
+.progress-bar {
+    background-color: #4a90e2;
+}
+
+#skills {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+#skills h2, #skills h3 {
+    color: #4a90e2;
+}
+
+.stat-percentage {
+    flex: 0 0 50px; /* Slightly increased from 40px */
+    text-align: right;
+    color: #fff;
+}
+
+.character-portrait {
+    text-align: center;
+    margin-bottom: 20px;
+    perspective: 1000px;
+}
+
+.character-portrait img {
+    width: 150px;
+    height: 150px;
+    border: 3px solid #4a90e2;
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.7);
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.stat-sheet h3 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #4a90e2;
+}
+
+.progress:hover .progress-bar {
+    box-shadow: 0 0 15px #4a90e2;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1a;
+    z-index: -1;
+}
+
+#skills {
+    position: relative;
+    z-index: 1;
+}
+
+.character-portrait:hover img {
+    transform: rotateY(180deg);
+}
+
+.character-info {
+    border-bottom: 1px solid #4a90e2;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.character-info .stat-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.character-info .stat-label,
+.character-info .stat-value {
+    width: 150px;
+    text-align: left;
+}
+
+.character-info .stat-label {
+    color: #4a90e2;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.character-info .stat-value {
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Adjust the existing styles */
+.stat-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    flex: 0 0 150px;
+    font-weight: bold;
+    color: #4a90e2;
+    display: flex;
+    align-items: center;
+}
+
+/* Only apply these styles to the skill rows, not the character info */
+.stat-sheet > .stat-row {
+    justify-content: space-between;
+}
+
+.stat-sheet > .stat-row .stat-label {
+    flex: 0 0 150px;
+}
+
+/* Contact page styles */
+#contact {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+#contact h2, #contact h3 {
+    color: #4a90e2;
+}
+
+#contact .form-control {
+    background-color: #333;
+    border: 1px solid #4a90e2;
+    color: #fff;
+}
+
+#contact .form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(74, 144, 226, 0.25);
+}
+
+#contact .btn-primary {
+    background-color: #4a90e2;
+    border-color: #4a90e2;
+}
+
+#contact .btn-primary:hover {
+    background-color: #3a7bc2;
+    border-color: #3a7bc2;
+}
+
+.contact-info li {
+    margin-bottom: 10px;
+}
+
+.contact-info i {
+    color: #4a90e2;
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #4a90e2;
+    font-size: 24px;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #3a7bc2;
+}
+
+/* About page styles */
+#about {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+#about h2, #about h3 {
+    color: #4a90e2;
+}
+
+#about img {
+    border: 3px solid #4a90e2;
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.7);
+}
+
+#about ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#about ul li:before {
+    content: "\f00c";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #4a90e2;
+    margin-right: 10px;
+}
+
+#about .profile-picture {
+    max-width: 250px;
+    border: 3px solid #4a90e2;
+    box-shadow: 0 0 15px rgba(74, 144, 226, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#about .profile-picture:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(74, 144, 226, 0.8);
+}
+
+#about h3 {
+    margin-top: 1rem;
+}
+
+body.dark-theme {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.text-primary {
+    color: #4a90e2 !important;
+}
+
+.btn-primary {
+    background-color: #4a90e2;
+    border-color: #4a90e2;
+}
+
+.btn-primary:hover {
+    background-color: #3a7bc2;
+    border-color: #3a7bc2;
+}
+
+.btn-outline-primary {
+    color: #4a90e2;
+    border-color: #4a90e2;
+}
+
+.btn-outline-primary:hover {
+    background-color: #4a90e2;
+    color: #fff;
+}
+
+.card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.skills-overview i {
+    transition: transform 0.3s ease-in-out;
+}
+
+.skills-overview i:hover {
+    transform: scale(1.1);
+}
+
+.glow-text {
+    color: #fff;
+    animation: glow 2s ease-in-out infinite;
+}
+
+#projects .card {
+    transition: transform 0.3s ease-in-out;
+}
+
+#projects .card:hover {
+    transform: translateY(-5px);
+}
+
+#projects .btn {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+body {
+    padding-top: 56px; /* Adjust this value based on your navbar height */
+}
+
+.navbar {
+    background-color: #f0f0f0 !important; /* Light grey color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    z-index: 1000;
+}
+
+.navbar-brand, .nav-link {
+    color: #333 !important; /* Dark text for contrast */
+}
+
+.nav-link:hover, .nav-link:focus {
+    color: #4a90e2 !important; /* Your accent color for hover state */
+}
+
+.navbar-toggler {
+    border-color: #4a90e2;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(74, 144, 226, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Optional: Add a subtle transition for smooth color changes */
+.navbar-brand, .nav-link {
+    transition: color 0.3s ease;
+}
+
+/* Adjust the active link color */
+.navbar-nav .nav-link.active {
+    color: #4a90e2 !important;
+    font-weight: bold;
+}
+
+.developer-tools .fas {
+    transition: transform 0.3s ease-in-out;
+}
+
+.developer-tools .col-md-4:hover .fas {
+    transform: scale(1.2);
+}
+
+.developer-tools h4 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.developer-tools p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.developer-tools .card {
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.developer-tools .card:hover {
+    transform: translateY(-5px);
+}
+
+.developer-tools .card-img-top {
+    height: 200px; /* Adjust as needed */
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.developer-tools .card:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+.developer-tools .card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.developer-tools .card-text {
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: 150px; /* Adjust this value as needed */
+}
+
+.developer-tools .btn {
+    margin-top: auto;
+}
+
+.ai-tools .card {
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.ai-tools .card:hover {
+    transform: translateY(-5px);
+}
+
+.ai-tools .card-img-top {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #343a40;
+}
+
+.ai-tools .card-img-top img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+.ai-tools .card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.ai-tools .card-text {
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: 150px; /* Adjust this value as needed */
+}
+
+.ai-tools .btn {
+    margin-top: auto;
+}
+
+/* Current Game Button and Panel */
+.current-game-button {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #007bff;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.current-game-button:hover {
+    background-color: #0056b3;
+}
+
+.current-game-panel {
+    position: fixed;
+    right: -400px; /* Increased from -350px */
+    top: 0;
+    width: 400px; /* Increased from 350px */
+    height: 100%;
+    background-color: rgba(52, 58, 64, 0.9);
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    overflow-y: auto;
+    transition: right 0.3s ease-out;
+}
+
+.current-game-panel.open {
+    right: 0;
+}
+
+.current-game-button::after {
+    content: 'Game Corner';
+    position: absolute;
+    right: 60px;
+    background-color: #007bff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.current-game-button:hover::after {
+    opacity: 1;
+}
+
+/* Adjust the game logo image size */
+.current-game-panel img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.current-game-panel .game-logo {
+    background-color: #1a1a1a;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.current-game-panel h4 {
+    color: #4a90e2;
+    margin-bottom: 10px;
+}
+
+.current-game-panel .hero-images {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.current-game-panel .hero-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #4a90e2;
+}
+
+.current-game-panel h5 {
+    color: #4a90e2;
+    margin-top: 1rem;
+}
+
+.current-game-panel .copy-psn {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.5rem;
+}
+
+.current-game-panel .btn-info {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+    color: white;
+}
+
+.current-game-panel .btn-info:hover {
+    background-color: #138496;
+    border-color: #117a8b;
+}
+
+.game-corner-button {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.game-corner-button:hover {
+    background-color: #0056b3;
+}
+
+.game-corner-button span {
+    margin-right: 10px;
+}
+
+.game-corner-button i {
+    font-size: 1.2em;
+}
+
+#game-corner-container {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-corner-button {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: right bottom;
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 0.9em;
+    white-space: nowrap;
+    z-index: 1001;
+}
+
+.game-corner-panel {
+    position: fixed;
+    top: 70px; /* Adjust this value to match your navbar height */
+    right: 0;
+    height: calc(100vh - 70px); /* Subtract navbar height from full viewport height */
+    width: 300px; /* Adjust width as needed */
+    background-color: rgba(52, 58, 64, 0.95);
+    padding: 15px;
+    transition: transform 0.3s ease-out;
+    transform: translateX(100%);
+    overflow-y: auto;
+    z-index: 999; /* Ensure it's below the navbar */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+#game-corner-container.open .game-corner-panel {
+    transform: translateX(0);
+}
+
+#game-corner-container.open .game-corner-button {
+    right: 300px; /* Should match the width of the panel */
+}
+
+/* Ensure content inside the panel is scrollable */
+.game-corner-panel > * {
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+/* Adjust internal elements as needed */
+.game-corner-panel h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.game-corner-panel h4 {
+    font-size: 1.1em;
+}
+
+.game-corner-panel h5 {
+    font-size: 1em;
+    margin-top: 15px;
+}
+
+.game-corner-panel p {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.game-corner-panel .btn {
+    font-size: 0.9em;
+    padding: 5px 10px;
+}
+
+.hero-images {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+.hero-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.game-logo-container {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: #1a1a1a;
+}
+
+.game-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.game-corner-panel h4 {
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Ensure proper spacing at the top of the panel */
+.game-corner-panel {
+    padding-top: 20px;
+}
+

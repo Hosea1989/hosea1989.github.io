@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damien Hosea - Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- Typed.js for text animation -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body class="dark-theme">
+    <div id="header-placeholder"></div>
+
+    <!-- Add this button and panel structure just after the header placeholder -->
+    <div id="game-corner-container">
+        <div id="game-corner-panel" class="game-corner-panel">
+            <div class="game-logo-container">
+                <img src="img/Overwatch_circle_logo.svg.png" alt="Current Game Logo" class="game-logo">
+            </div>
+            <h4 id="game-title">Overwatch 2</h4>
+            <p id="game-description">A team-based action game set in an optimistic future.</p>
+            
+            <h5 class="mt-4">My Main Heroes</h5>
+            <div class="hero-images">
+                <img src="img/ana.png" alt="Ana" class="hero-img">
+                <img src="img/kiriko.png" alt="Kiriko" class="hero-img">
+                <img src="img/moira.png" alt="Moira" class="hero-img">
+            </div>
+            
+            <h5 class="mt-4">Add Me</h5>
+            <p>PlayStation Network: <strong id="psn-id">ZamnZamien</strong></p>
+            <button class="btn btn-sm btn-outline-primary copy-btn" data-copy-target="psn-id">Copy PSN ID</button>
+            <p>Blizzard.net: <strong id="blizzard-id">zamnzamien#1917</strong></p>
+            <button class="btn btn-sm btn-outline-primary copy-btn" data-copy-target="blizzard-id">Copy Blizzard.net ID</button>
+            
+            <div class="mt-4">
+                <a href="https://www.overbuff.com/players/ZamnZamien-1917" target="_blank" class="btn btn-info mb-3">My Overbuff Profile</a>
+            </div>
+            
+            <div class="mt-2">
+                <a href="https://discord.gg/m5yK2gE8" target="_blank" class="btn btn-primary mb-3">Join my Discord</a>
+            </div>
+        </div>
+        <div id="game-corner-button" class="game-corner-button">
+            Game <i class="fas fa-gamepad"></i>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero py-5 shadow-lg">
+            <div id="particles-js"></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 text-center">
+                        <h1 class="display-4 fw-bold text-primary mb-3">
+                            <span class="glow-text">Welcome</span>
+                        </h1>
+                        <h2 class="display-5 fw-bold text-light mb-3">I'm Damien</h2>
+                        <p class="lead text-light">I'm <span id="typed-text"></span></p>
+                        <a href="projects.html" class="btn btn-primary btn-lg mt-3">View My Work</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section id="featured-projects" class="featured-projects py-5">
+            <div class="container">
+                <h2 class="text-center mb-4 text-primary">Featured Projects</h2>
+                <div class="row">
+                    <!-- Project 1 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card bg-dark text-light">
+                            <img src="img/project1.jpg" class="card-img-top" alt="Project 1">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">Project 1</h5>
+                                <p class="card-text">Brief description of Project 1</p>
+                                <a href="#" class="btn btn-outline-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card bg-dark text-light">
+                            <img src="img/project2.jpg" class="card-img-top" alt="Project 2">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">Project 2</h5>
+                                <p class="card-text">Brief description of Project 2</p>
+                                <a href="#" class="btn btn-outline-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card bg-dark text-light">
+                            <img src="img/project3.jpg" class="card-img-top" alt="Project 3">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">Project 3</h5>
+                                <p class="card-text">Brief description of Project 3</p>
+                                <a href="#" class="btn btn-outline-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Overview Section -->
+        <section class="skills-overview py-5">
+            <div class="container">
+                <h2 class="text-center mb-4 text-primary">My Skills</h2>
+                <div class="row text-center">
+                    <div class="col-md-3 mb-3">
+                        <i class="fas fa-code fa-3x mb-3 text-primary"></i>
+                        <h4 class="text-light">Web Development</h4>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <i class="fas fa-mobile-alt fa-3x mb-3 text-primary"></i>
+                        <h4 class="text-light">Mobile Development</h4>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <i class="fas fa-paint-brush fa-3x mb-3 text-primary"></i>
+                        <h4 class="text-light">UI/UX Design</h4>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <i class="fas fa-database fa-3x mb-3 text-primary"></i>
+                        <h4 class="text-light">Database Management</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Favorite Developer Tools Section -->
+        <section class="developer-tools py-5">
+            <div class="container">
+                <h2 class="text-center mb-4 text-primary">My Favorite Developer Tools</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card bg-dark text-light h-100">
+                            <img src="img/intellij.png" class="card-img-top" alt="IntelliJ IDEA">
+                            <div class="card-body">
+                                <h4 class="card-title text-primary">IntelliJ IDEA</h4>
+                                <p class="card-text">A powerful IDE for Java development with advanced code analysis, refactoring tools, and seamless integration with various frameworks. Its smart code completion and debugging features significantly boost productivity.</p>
+                                <a href="https://www.jetbrains.com/idea/" target="_blank" class="btn btn-outline-primary mt-2">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card bg-dark text-light h-100">
+                            <img src="img/vscode.png" class="card-img-top" alt="Visual Studio Code">
+                            <div class="card-body">
+                                <h4 class="card-title text-primary">Visual Studio Code</h4>
+                                <p class="card-text">A lightweight yet powerful source code editor that supports a wide range of programming languages. With its extensive marketplace of extensions, integrated Git control, and debugging tools, VS Code offers a highly customizable development environment.</p>
+                                <a href="https://code.visualstudio.com/" target="_blank" class="btn btn-outline-primary mt-2">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card bg-dark text-light h-100">
+                            <img src="img/unity.png" class="card-img-top" alt="Unity">
+                            <div class="card-body">
+                                <h4 class="card-title text-primary">Unity</h4>
+                                <p class="card-text">A versatile game development engine for creating both 2D and 3D games. Unity offers a user-friendly interface, a powerful physics engine, and cross-platform deployment capabilities. Its extensive asset store and active community make it an excellent choice for game developers of all skill levels.</p>
+                                <a href="https://unity.com/" target="_blank" class="btn btn-outline-primary mt-2">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Favorite AI Tools Section -->
+        <section class="ai-tools py-5">
+            <div class="container">
+                <h2 class="text-center mb-4 text-primary">My Favorite AI Tools</h2>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card bg-dark text-light h-100">
+                            <div class="card-img-top d-flex align-items-center justify-content-center" style="height: 200px; background-color: #343a40;">
+                                <img src="img/ChatGPT-Logo-768x432.png" alt="ChatGPT" style="max-width: 80%; max-height: 80%; object-fit: contain;">
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title text-primary">ChatGPT</h4>
+                                <p class="card-text">An advanced language model by OpenAI that excels in natural language processing tasks. ChatGPT can assist with code explanation, debugging, and even generating code snippets, making it an invaluable tool for developers seeking quick insights or creative solutions.</p>
+                                <a href="https://chat.openai.com/" target="_blank" class="btn btn-outline-primary mt-2">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card bg-dark text-light h-100">
+                            <img src="img/Cursor-AI.png" class="card-img-top" alt="Cursor">
+                            <div class="card-body">
+                                <h4 class="card-title text-primary">Cursor</h4>
+                                <p class="card-text">An AI-powered code editor that combines the functionality of traditional IDEs with the power of large language models. Cursor offers features like intelligent code completion, refactoring suggestions, and natural language to code translation, enhancing developer productivity and code quality.</p>
+                                <a href="https://cursor.sh/" target="_blank" class="btn btn-outline-primary mt-2">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="cta py-5">
+            <div class="container text-center">
+                <h2 class="mb-4 text-primary">Interested in working together?</h2>
+                <a href="contact.html" class="btn btn-primary btn-lg">Hit Me Up!</a>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery (needed for loading components) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/scripts.js"></script>
+    <script src="js/current-game.js"></script>
+</body>
+</html>
