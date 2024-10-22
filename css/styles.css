@@ -24,23 +24,35 @@
 
 .hero {
     position: relative;
-    background-color: #1a1a1a;
-    color: #fff;
-    overflow: hidden;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     align-items: center;
-    box-shadow: 0 5px 15px rgb(0, 0, 0);
+    justify-content: center;
+    overflow: hidden;
 }
 
-.hero::after {
-    content: '';
+.hero-content {
     position: absolute;
-    bottom: 0;
+    top: 20%; /* Adjust this value to move the text higher or lower */
     left: 0;
     right: 0;
-    height: 30px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent);
+    text-align: center;
+    z-index: 2;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/wallpaper.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.7; /* Increased from 0.5 */
+    filter: brightness(1.2) contrast(1.1); /* Added to brighten the image */
+    z-index: -1;
 }
 
 #particles-js {
@@ -49,6 +61,7 @@
     height: 100%;
     top: 0;
     left: 0;
+    z-index: 0;
 }
 
 .hero .container {
@@ -56,10 +69,13 @@
     z-index: 1;
 }
 
+.hero h1, .hero h2, .hero p {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
 .hero h1 {
     font-size: 4rem;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .hero h2 {
@@ -168,17 +184,65 @@
 }
 
 .stat-label {
-    flex: 0 0 150px;
+    flex: 0 0 120px;
     font-weight: bold;
     color: #4a90e2;
-    display: flex;
-    align-items: center;
 }
 
-.stat-label i {
-    width: 25px; /* Slightly increased */
-    text-align: center;
-    margin-right: 10px;
+.level-bar {
+    flex-grow: 1;
+    height: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 10px;
+}
+
+.level-fill {
+    height: 100%;
+    transition: width 0.3s ease-in-out;
+}
+
+.coding-fill {
+    background-color: #ff6b6b; /* Red */
+}
+
+.teaching-fill {
+    background-color: #4ecdc4; /* Teal */
+}
+
+.problem-solving-fill {
+    background-color: #feca57; /* Yellow */
+}
+
+.curriculum-fill {
+    background-color: #9b59b6; /* Purple */
+}
+
+.system-design-fill {
+    background-color: #3498db; /* Blue */
+}
+
+.leadership-fill {
+    background-color: #2ecc71; /* Green */
+}
+
+.level-bar:hover .coding-fill { box-shadow: 0 0 10px #ff6b6b; }
+.level-bar:hover .teaching-fill { box-shadow: 0 0 10px #4ecdc4; }
+.level-bar:hover .problem-solving-fill { box-shadow: 0 0 10px #feca57; }
+.level-bar:hover .curriculum-fill { box-shadow: 0 0 10px #9b59b6; }
+.level-bar:hover .system-design-fill { box-shadow: 0 0 10px #3498db; }
+.level-bar:hover .leadership-fill { box-shadow: 0 0 10px #2ecc71; }
+
+.stat-label i.fa-code { color: #ff6b6b; }
+.stat-label i.fa-chalkboard-teacher { color: #4ecdc4; }
+.stat-label i.fa-puzzle-piece { color: #feca57; }
+.stat-label i.fa-book { color: #9b59b6; }
+.stat-label i.fa-project-diagram { color: #3498db; }
+.stat-label i.fa-users { color: #2ecc71; }
+
+.level-bar:hover .level-fill {
+    box-shadow: 0 0 10px #4a90e2;
 }
 
 .stat-value {
@@ -214,16 +278,20 @@
 .character-portrait {
     text-align: center;
     margin-bottom: 20px;
-    perspective: 1000px;
 }
 
 .character-portrait img {
-    width: 150px;
-    height: 150px;
-    border: 3px solid #4a90e2;
-    box-shadow: 0 0 10px rgba(74, 144, 226, 0.7);
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
+    width: 250px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 3px solid #4a90e2; /* Blue border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    transition: box-shadow 0.3s ease;
+}
+
+.character-portrait img:hover {
+    box-shadow: 0 6px 12px rgba(74, 144, 226, 0.5); /* Enhance shadow on hover */
 }
 
 .stat-sheet h3 {
@@ -860,3 +928,104 @@ body {
     padding-top: 20px;
 }
 
+.photo-gallery {
+    margin-top: 20px;
+}
+
+.gallery-img {
+    border: 2px solid #4a90e2;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(74, 144, 226, 0.5);
+}
+
+.carousel-item img {
+    max-height: 400px; /* Adjust this value as needed */
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: rgba(0,0,0,0.5);
+    width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #4a90e2;
+    border-radius: 50%;
+}
+
+/* Add these styles at the end of your existing CSS */
+
+.character-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.stat-bar {
+    height: 20px;
+    background-color: #444;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.stat-fill {
+    height: 100%;
+    background-color: #007bff;
+}
+
+.hero-image {
+    max-width: 300px;
+    border: 5px solid #4a90e2;
+    box-shadow: 0 0 20px rgba(74, 144, 226, 0.5);
+}
+
+@media (max-width: 767px) {
+    .hero-image {
+        max-width: 200px;
+    }
+}
+
+.hero p.lead {
+    margin-bottom: 2rem;
+}
+
+/* Colorful progress bars */
+.progress-bar.python-bar {
+    background-color: #3776AB;
+}
+
+.progress-bar.js-bar {
+    background-color: #F7DF1E;
+}
+
+.progress-bar.html-css-bar {
+    background-color: #E34F26;
+}
+
+.progress-bar.cpp-bar {
+    background-color: #00599C;
+}
+
+.progress-bar.csharp-bar {
+    background-color: #239120;
+}
+
+.progress-bar.java-bar {
+    background-color: #007396;
+}
+
+/* Optional: Add a gradient effect to the bars */
+.progress-bar {
+    background-image: linear-gradient(45deg, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+    background-size: 1rem 1rem;
+}

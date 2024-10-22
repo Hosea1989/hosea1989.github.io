@@ -22,8 +22,8 @@ $(function(){
 
     // Typed.js initialization
     if ($('#typed-text').length > 0) {
-        var typed = new Typed('#typed-text', {
-            strings: ['a Web Developer', 'a Game Developer', 'a Software Engineer', 'an Educator'],
+        var typed = new window.Typed('#typed-text', {
+            strings: ['Damien Hosea', 'a Web Developer', 'a Game Developer', 'a Software Engineer', 'an Educator', 'a Gamer','a Gemini'],
             typeSpeed: 50,
             backSpeed: 50,
             loop: true
@@ -50,4 +50,32 @@ $(function(){
             }
         });
     }
+
+    function updateHeaderQuote() {
+        const quotes = [
+            "I am capable of achieving greatness",
+            "I trust in my ability to grow and succeed",
+            "I am a visionary leader",
+            "Everyday, I am becoming a better version of myself",
+            "I have the power to create positive change in my life",
+            "I am worthy of happiness, success, and love",
+            "I am confident, resilient, and strong",
+            "I choose to focus on what I can control and let go of what I cannot",
+            "I attract positive energy and opportunities",
+            "I embrace challenges as opportunities for growth",
+            "I am proud of my progress",
+        
+        ];
+        const quoteElement = document.getElementById('header-quote');
+        if (quoteElement) {
+            const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+            quoteElement.textContent = randomQuote;
+        }
+    }
+
+    // Update the quote every 5 seconds (5000 milliseconds)
+    setInterval(updateHeaderQuote, 5000);
+
+    // Also update immediately when the page loads
+    document.addEventListener('DOMContentLoaded', updateHeaderQuote);
 });

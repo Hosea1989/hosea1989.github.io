@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Damien Hosea</title>
+    <title>Character Profile - Damien Hosea</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome for icons -->
@@ -15,36 +15,149 @@
     <div id="header-placeholder"></div>
 
     <main>
-        <section id="about" class="py-5">
+        <section id="character-profile" class="py-5">
             <div class="container">
-                <h2 class="text-center mb-5 text-primary">About Me</h2>
+                <h2 class="text-center mb-5 text-primary">Character Profile</h2>
                 <div class="row">
                     <div class="col-md-4 mb-4">
-                        <div class="text-center">
-                            <img src="img/Damien_Juggle 3.GIF" alt="Damien Hosea" class="img-fluid mb-4 profile-picture">
-                            <h3 class="text-light">Damien Hosea</h3>
-                            <p class="text-primary">Full Stack Developer</p>
+                        <div class="stat-sheet">
+                            <div class="character-portrait">
+                                <img src="img/Damien_Juggle 3.GIF" alt="Damien Hosea" class="profile-picture">
+                            </div>
+                            <div class="character-info">
+                                <div class="stat-row">
+                                    <div class="stat-label">Name:</div>
+                                    <div class="stat-value">Damien Hosea</div>
+                                </div>
+                                <div class="stat-row">
+                                    <div class="stat-label">Occupation:</div>
+                                    <div class="stat-value">Full Stack Developer / Educator</div>
+                                </div>
+                                <div class="stat-row">
+                                    <div class="stat-label">Location:</div>
+                                    <div class="stat-value">Oakland, CA</div>
+                                </div>
+                            </div>
+                            <h3 class="text-primary">Core Stats</h3>
+                            <div class="stat-row">
+                                <div class="stat-label"><i class="fas fa-code"></i> Coding</div>
+                                <div class="level-bar">
+                                    <div class="level-fill coding-fill" style="width: 90%"></div>
+                                </div>
+                                <div class="stat-level">Lv. 9</div>
+                            </div>
+                            <div class="stat-row">
+                                <div class="stat-label"><i class="fas fa-chalkboard-teacher"></i> Teaching</div>
+                                <div class="level-bar">
+                                    <div class="level-fill teaching-fill" style="width: 85%"></div>
+                                </div>
+                                <div class="stat-level">Lv. 8</div>
+                            </div>
+                            <div class="stat-row">
+                                <div class="stat-label"><i class="fas fa-puzzle-piece"></i> Problem Solving</div>
+                                <div class="level-bar">
+                                    <div class="level-fill problem-solving-fill" style="width: 88%"></div>
+                                </div>
+                                <div class="stat-level">Lv. 9</div>
+                            </div>
+                            <div class="stat-row">
+                                <div class="stat-label"><i class="fas fa-book"></i> Curriculum Dev</div>
+                                <div class="level-bar">
+                                    <div class="level-fill curriculum-fill" style="width: 80%"></div>
+                                </div>
+                                <div class="stat-level">Lv. 8</div>
+                            </div>
+                            <div class="stat-row">
+                                <div class="stat-label"><i class="fas fa-project-diagram"></i> System Design</div>
+                                <div class="level-bar">
+                                    <div class="level-fill system-design-fill" style="width: 75%"></div>
+                                </div>
+                                <div class="stat-level">Lv. 7</div>
+                            </div>
+                            <div class="stat-row">
+                                <div class="stat-label"><i class="fas fa-users"></i> Leadership</div>
+                                <div class="level-bar">
+                                    <div class="level-fill leadership-fill" style="width: 80%"></div>
+                                </div>
+                                <div class="stat-level">Lv. 8</div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-8">
-                        <h3 class="text-primary">My Journey</h3>
-                        <p class="text-light">
-                            Hello! I'm Damien, a passionate Full Stack Developer based in Oakland, California. My journey in tech began [brief background]. I've always been fascinated by [what interests you in tech], which led me to pursue a career in software development.
-                        </p>
-                        <p class="text-light">
-                            With a background in [your educational background or previous work experience], I bring a unique perspective to my development work. I'm constantly learning and expanding my skillset to stay at the forefront of technology trends.
-                        </p>
-                        <h3 class="mt-4 text-primary">What I Do</h3>
-                        <ul class="text-light">
-                            <li>Develop responsive and user-friendly web applications</li>
-                            <li>Create efficient backend systems and APIs</li>
-                            <li>Implement database solutions for optimal data management</li>
-                            <li>Collaborate with cross-functional teams to deliver high-quality software</li>
-                        </ul>
-                        <h3 class="mt-4 text-primary">Beyond Coding</h3>
-                        <p class="text-light">
-                            When I'm not coding, you can find me [your hobbies or interests]. I believe in [a personal philosophy or approach to work/life]. I'm always excited to take on new challenges and contribute to innovative projects.
-                        </p>
+                        <div class="character-card">
+                            <h3 class="text-primary">Background Story</h3>
+                            <p class="text-light">
+                                Damien's journey in the tech world began in 2016 when he decided to return to school,
+                                majoring in Computer Science at Los Angeles City College. His fascination with video
+                                games, technology, and tinkering led him to pursue a career in software development.
+                            </p>
+                            <p class="text-light">
+                                Now, as an Educator and Community Based Organizer for the Hidden Genius Project,
+                                Damien trains and mentors black male youth in technology creation, entrepreneurship, and
+                                leadership skills.
+                            </p>
+                        </div>
+
+                        <div class="character-card">
+                            <h3 class="text-primary">Photo Gallery</h3>
+                            <div id="photoCarousel" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="img/umojagang.JPG" class="d-block w-100" alt="Description of photo 1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/umojaguys.JPG" class="d-block w-100" alt="Description of photo 2">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/laccfitness.JPG" class="d-block w-100" alt="Description of photo 3">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/billduke.jpg" class="d-block w-100" alt="Description of photo 3">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/esports.jpg" class="d-block w-100" alt="Description of photo 3">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/inpink.jpg" class="d-block w-100" alt="Description of photo 3">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/inpink2.jpg" class="d-block w-100" alt="Description of photo 3">
+                                    </div>
+                                    <!-- Add more carousel-item divs for additional photos -->
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#photoCarousel" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="character-card">
+                            <h3 class="text-primary">Special Abilities</h3>
+                            <ul class="text-light">
+                                <li>Curriculum Development</li>
+                                <li>Workshop Organization</li>
+                                <li>Team Management</li>
+                                <li>Unity Game Development</li>
+                                <li>Full Stack Web Development</li>
+                                <li>Version Control Mastery</li>
+                                <li>AI Tool Utilization</li>
+                                <li>Advanced Mathematics</li>
+                                <li>Article Writing and Editing</li>
+                                <li>Public Speaking</li>
+                            </ul>
+                        </div>
+
+                        <div class="character-card">
+                            <h3 class="text-primary">Character Traits</h3>
+                            <p class="text-light">
+                                Damien believes that once fear is removed, anything can be achieved. He's always excited to take on new challenges and contribute to innovative projects. Outside of his tech pursuits, Damien enjoys playing video games, watching anime, and taking walks around the lake.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
