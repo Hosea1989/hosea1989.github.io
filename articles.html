@@ -19,16 +19,80 @@
             <div class="container">
                 <h2 class="text-center mb-5 text-primary">My Articles</h2>
                 
-                <div class="row">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                     <!-- The Return to the Kingdom of Hearts Article -->
-                    <div class="col-md-6 mb-4">
+                    <div class="col">
                         <div class="card bg-dark text-light h-100">
                             <img src="img/1_1ho7nnEGeCefz1YAQa9Vzg.webp" class="card-img-top" alt="Kingdom Hearts 3 Thumbnail">
                             <div class="card-body">
                                 <h5 class="card-title text-primary">The Return to the Kingdom of Hearts</h5>
                                 <p class="card-text">Explore the latest installment in the beloved Kingdom Hearts series and what it means for long-time fans and newcomers alike.</p>
+                                <a href="#" class="btn btn-primary read-more mt-auto" data-bs-toggle="modal" data-bs-target="#articleModal" data-title="The Return to the Kingdom of Hearts" data-content-id="kingdom-hearts-article">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- New Article 1 -->
+                    <div class="col">
+                        <div class="card bg-dark text-light h-100">
+                            <img src="img/FF7R-Thumb-1.jpg" class="card-img-top" alt="Final Fantasy 7 Remake">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">Final Fantasy VII Remake  - The Next Big Thing
+                                </h5>
+                                <p class="card-text">Brief description of Article 1.</p>
+                                <a href="#" class="btn btn-primary read-more mt-auto" data-bs-toggle="modal" data-bs-target="#articleModal" data-title="Article 1 Title" data-content-id="article1-content">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- New Article 2 -->
+                    <div class="col">
+                        <div class="card bg-dark text-light h-100">
+                            <img src="img/Death-Stranding-logo.webp" class="card-img-top" alt="Death Stranding Thumbnail">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">Death Stranding: Forming a Connection for a Better Tomorrow</h5>
+                                <p class="card-text">Explore Hideo Kojima's ambitious new game that introduces a whole new genre: the Social Strand System.</p>
+                                <p><small class="text-muted">Published on: November 1, 2019</small></p>
+                                <a href="#" class="btn btn-primary read-more mt-auto" data-bs-toggle="modal" data-bs-target="#articleModal" data-title="Death Stranding: Forming a Connection for a Better Tomorrow" data-content-id="article2-content">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- New Article 3 -->
+                    <div class="col">
+                        <div class="card bg-dark text-light h-100">
+                            <img src="img/share_icon-fb_en-ca.jpg" class="card-img-top" alt="Pokémon Shield and Sword Thumbnail">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">A New Way to 'Catch Them All'!</h5>
+                                <p class="card-text">Explore the new features and changes coming to the Pokémon franchise with Pokémon Shield and Sword for the Nintendo Switch.</p>
+                                <p><small class="text-muted">Published on: November 10, 2019</small></p>
+                                <a href="#" class="btn btn-primary read-more mt-auto" data-bs-toggle="modal" data-bs-target="#articleModal" data-title="A New Way to 'Catch Them All'!" data-content-id="article3-content">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- New Article 4 -->
+                    <div class="col">
+                        <div class="card bg-dark text-light h-100">
+                            <img src="img/collegefootball.webp" class="card-img-top" alt="Gaming in College Thumbnail">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">Searching for a Place to Belong: The Role of Video Games in College Life</h5>
+                                <p class="card-text">Explore how video games can enhance the college experience by fostering community, developing social skills, and providing stress relief.</p>
+                                <p><small class="text-muted">Published on: September 15, 2019</small></p>
+                                <a href="#" class="btn btn-primary read-more mt-auto" data-bs-toggle="modal" data-bs-target="#articleModal" data-title="Searching for a Place to Belong: The Role of Video Games in College Life" data-content-id="article4-content">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- New Article 5 -->
+                    <div class="col">
+                        <div class="card bg-dark text-light h-100">
+                            <img src="img/videogameviolence.png" class="card-img-top" alt="Digital Worlds with Real World Consequences Thumbnail">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">Digital Worlds with Real World Consequences</h5>
+                                <p class="card-text">An in-depth exploration of the complex relationship between video games, violence, and society.</p>
                                 <p><small class="text-muted">Published on: June 1, 2023</small></p>
-                                <a href="#" class="btn btn-primary read-more" data-bs-toggle="modal" data-bs-target="#articleModal" data-title="The Return to the Kingdom of Hearts" data-content-id="kingdom-hearts-article">Read More</a>
+                                <a href="#" class="btn btn-primary read-more mt-auto" data-bs-toggle="modal" data-bs-target="#articleModal" data-title="Digital Worlds with Real World Consequences" data-content-id="article5-content">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -48,13 +112,16 @@
 
     <!-- Add this at the end of your body, before the scripts -->
     <div class="modal fade" id="articleModal" tabindex="-1" aria-labelledby="articleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-xl">
+      <div class="modal-dialog modal-dialog-scrollable modal-lg">
         <div class="modal-content bg-dark text-light">
+          <!-- Remove this entire section:
           <div class="modal-header">
-            <h5 class="modal-title text-primary" id="articleModalLabel"></h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h5 class="modal-title" id="articleModalLabel"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
+          -->
           <div class="modal-body">
+            <!-- Modal content will be inserted here -->
           </div>
         </div>
       </div>
@@ -63,6 +130,13 @@
     <!-- Hidden article content -->
     <div id="kingdom-hearts-article" style="display: none;">
         <img src="img/1_1ho7nnEGeCefz1YAQa9Vzg.webp" alt="Kingdom Hearts 3 Cover" class="img-fluid mb-3">
+        <h2 class="text-primary article-title">The Return to the Kingdom of Hearts</h2>
+        <div class="card bg-dark text-light mb-3 border-primary">
+            <div class="card-body text-center">
+                <p class="mb-0"><strong>Release Date:</strong> January 29, 2019</p>
+                <p class="mb-0"><strong>Platforms:</strong> PlayStation 4, Xbox One</p>
+            </div>
+        </div>
         
         <p>On January 29th, following a 13 year hiatus, Japanese developer Square Enix released the highly anticipated "Kingdom Hearts III" worldwide for Playstation 4 and Xbox One platforms to complete the popular trilogy.</p>
 
@@ -84,6 +158,131 @@
         <div class="ratio ratio-16x9 mt-3">
             <iframe src="https://www.youtube.com/embed/2VawSnaxtSI" title="Kingdom Hearts III Trailer" allowfullscreen></iframe>
         </div>
+    </div>
+
+    <!-- Add these hidden divs for the new article contents -->
+    <div id="article1-content" style="display: none;">
+        <img src="img/FF7R-Thumb-1.jpg" alt="Final Fantasy VII Remake Cover Art" class="img-fluid mb-3">
+        <h2 class="text-primary article-title">The Return of a Classic: Final Fantasy VII Remake</h2>
+        <div class="card bg-dark text-light mb-3 border-primary">
+            <div class="card-body text-center">
+                <p class="mb-0"><strong>Release Date:</strong> March 3, 2020</p>
+                <p class="mb-0"><strong>Platform:</strong> PlayStation 4</p>
+            </div>
+        </div>
+        
+        <p>The world has fallen under the dominion of the Shinra Company, a corporation that has monopolized the planet's very life force as Mako energy. Cloud Strife, a former member of Shinra's elite SOLDIER, lends his aid to the rebels, unaware that he will be drawn into an epic battle for the fate of the planet, while having to come to terms with his own lost past. This is the backstory to a timeless classic that has caused Final Fantasy VII to sell over 2 million copies in 3 days in Japan.</p>
+
+        <p>On March 3, 2020, Japanese Developer Square Enix will finally release "Final Fantasy VII Remake" for the PlayStation 4 Entertainment System. Final Fantasy VII is the seventh entry in the Final Fantasy series.</p>
+
+        <p>Final Fantasy VII is an extremely popular Japanese Role Playing Game (JRPG) that follows the story of an arrogant mercenary, Cloud Strife. The initial storyline begins when Cloud is hired by AVALANCHE, an eco-terrorist insurgency group who will do whatever they must in order to save the planet.</p>
+
+        <p>The story in Final Fantasy VII centers around an evil mega-corporation, Shinra Electric Power Company. Shinra sets up reactors around the world to extract mako; the planet's life, to use it for their own personal gain. Once AVALANCHE steps in to oppose Shinra's ambitions, after a while they discover that there are greater forces at work.</p>
+
+        <p>In 1997, Final Fantasy VII won numerous awards. The JRPG won The Academy of Interactive Arts & Sciences first annual Interactive Achievement Award in the categories: Console Adventure Game of the Year, Console Role Playing Game of the Year. Along with winning awards for "Most Hyper for a game", "Best Ending" and "Best Print Ad".</p>
+
+        <p>Square Enix has decided to collaborate with Fortnite developer Epic Games to help deliver an unforgettable moment in gaming history. "We're humbled that Square Enix has chosen Unreal Engine 4 to recreate one of the world's most beloved video games of all time". Fans will finally get a chance to control their favorite characters in High Definition.</p>
+
+        <p>The original Final Fantasy VII game case contained 3 discs of game content. The Final Fantasy VII Remake will be broken down into multiple episodes. According to character designer Tetsuya Normura, "If we dedicated our time to a single release, we'd have to cut some parts, and additional parts would come in few, so rather than remake the game as a full volume, we decided to do multiple parts."</p>
+        
+        <p>Final Fantasy VII is a masterpiece that must be experienced in order to fully understand why it is one of the greatest games of all time.</p>
+
+        <p>Final Fantasy VII Remake will make its triumphant return to the PlayStation 4 Entertainment System, March 3, 2020.</p>
+    </div>
+
+    <div id="article2-content" style="display: none;">
+        <img src="img/Death-Stranding-logo.webp" alt="Death Stranding Cover Art" class="img-fluid mb-3">
+        <h2 class="text-primary article-title">Death Stranding: Forming a Connection for a Better Tomorrow</h2>
+        <div class="card bg-dark text-light mb-3 border-primary">
+            <div class="card-body text-center">
+                <p class="mb-0"><strong>Release Date:</strong> November 8, 2019 (PS4), Q2 2020 (PC)</p>
+                <p class="mb-0"><strong>Platforms:</strong> PlayStation 4, Windows PC</p>
+            </div>
+        </div>
+        
+        <p>In the near future, mysterious explosions have rocked the planet, setting off a series of supernatural events known as the "Death Stranding." With creatures plaguing the landscape, and the planet on the verge of a mass extinction, it's up to Sam Bridges to journey across the ravaged wasteland and save mankind from impending annihilation.</p>
+
+        <p>The Action game /Strand game, "Death Stranding" stars a man named Sam Bridges, a "reputed" delivery man who must journey across a ravaged landscape crawling with otherworldly threats to save mankind from the brink of extinction. Along with the cargo that Sam must carry, he must also carry a baby which symbolizes... maybe I shouldn't ruin the story.</p>
+
+        <p>The main protagonist, Sam Bridges is portrayed by "Walking Dead" actor Norman Reedus. Actors, Mads Mikkelsen, "Doctor Strange", and Lindsay Wagner, "The Bionic Woman", to name a few; provide voice acting, motion capture and 3D scanning for "Death Stranding." Film director and author Guillermo del Toro is also featured.</p>
+
+        <p>"Death Stranding" will introduce a new gaming genre: Action/Strand or Social Strand System. According to Japanese designer, screenwriter and director Hideo Kojima's Twitter, "[Death Stranding] is not a stealth game. [You] could move subjectively but not [as] a FPS [first-person shooter] shooting game either. By incorporating the concept of connection(strand); it's [a] totally brand new genre called action game/strand game [social strand system]." This system capitalizes on the idea that what one player does on their journey could impact the journey of another.</p>
+
+        <p>In 2005, Kojima Productions was registered as a subsidiary to Japanese gambling company Konami. Kojima Productions is notably known for the "Metal Gear" series. However, in 2015 after a power struggle between Kojima Productions and Konami, Konami decided to make drastic changes, one which included the termination of Hideo Kojima and the disbanding of Kojima Productions. In the same year, Hideo Kojima reformed the Kojima Productions as an independent studio.</p>
+
+        <p>In order for "Death Stranding" to become the best game Hideo envisioned, partnerships would have to be made. During the reforming of Kojima Productions, Hideo announced that he would be partnering with Sony Entertainment.</p>
+
+        <p>In order for Kojima Productions to deliver a compelling project, Hideo announced that he'll be utilizing the Decima engine from Guerrilla games, which was used to create, "Horizon Zero Dawn," a game that won numerous awards in 2017. "The Decima engine has taken a 'quantum leap' forward in the past few years to get it ready for this project," said the CEO of Guerrilla Games, Herman Hulst.</p>
+    </div>
+
+    <div id="article3-content" style="display: none;">
+        <img src="img/share_icon-fb_en-ca.jpg" alt="Pokémon Shield and Sword Cover Art" class="img-fluid mb-3">
+        <h2 class="text-primary article-title">A New Way to 'Catch Them All'!</h2>
+        <div class="card bg-dark text-light mb-3 border-primary">
+            <div class="card-body text-center">
+                <p class="mb-0"><strong>Release Date:</strong> November 15, 2019</p>
+                <p class="mb-0"><strong>Platform:</strong> Nintendo Switch</p>
+            </div>
+        </div>
+        
+        <p>Welcome to the Galor Region, where the countryside is full of life and the cities are contemporary. The plains are vast and the mountains are covered in snow. In the Galor region, Pokémon battles are the main attraction and becoming the next Pokémon League Champion is the main objective.</p>
+
+        <p>On November 15, 2019, Japanese game developer Game Freak will release Pokémon Shield and Pokémon Sword for the Nintendo Switch game console. Pokémon Shield and Sword is the 17th installment in the Pokémon franchise and will introduce the 8th generation of Pokémon.</p>
+
+        <p>In the core Pokémon games, players are designated as Pokémon Trainers and have three main objectives:</p>
+        <ul>
+            <li>To complete the regional Pokédex; which is an electronic encyclopedia that collects all of the available Pokémon species found in the respective region</li>
+            <li>To complete the national Pokédex by transferring Pokémon from other Pokémon games</li>
+            <li>To train a team of powerful Pokémon to battle other Trainers so they may eventually win the Pokémon League and become the regional Champion</li>
+        </ul>
+
+        <p>In Pokémon Shield and Sword, the idea of becoming a Champion has been enhanced to give Trainers a whole new strategic approach when it comes to Pokémon battles. For example, a new feature called "Dynamax", will be introduced where Pokémon power up and grow much larger than normal. The Dynamaxed Pokémon's moves will also change, causing them to be much stronger than intended. This gives the player a whole new way to experience Pokémon battles in the Galor Region.</p>
+
+        <p>There are over 800 different species of Pokémon but unlike previous core Pokémon games, not all existing species of Pokémon will be available in Pokémon Shield and Sword. According to Producer Junichi Masuda, "the Switch's hardware quality made it easier for Pokmon to be unique and expressive, and the designers had to balance importing as many as possible and updating them to these high standards while still keeping development deadlines."</p>
+
+        <p>At the E3 Gaming Conference 2019, Nintendo announced that they will release a cloud-based service for the Nintendo Switch and mobile devices called, "Pokémon Home". This service will allow you to transfer Pokémon between all current Pokémon titles including the popular mobile game, Pokémon Go and Pokémon Shield and Sword. According to Masuda, "you'll be able to trade Pokémon from within Home as long as you have a smartphone with you."</p>
+    </div>
+
+    <div id="article4-content" style="display: none;">
+        <img src="img/collegefootball.webp" alt="Students Gaming Together" class="img-fluid mb-3">
+        <h2 class="text-primary article-title">Searching for a Place to Belong: The Role of Video Games in College Life</h2>
+        <div class="card bg-dark text-light mb-3 border-primary">
+            <div class="card-body text-center">
+                <p class="mb-0"><strong>Published on:</strong> September 15, 2019</p>
+                <p class="mb-0"><strong>Author:</strong> Damien Hosea, Staff Writer</p>
+            </div>
+        </div>
+        
+        <p>Since the early 1970s, video games have been stimulating and developing the minds of young adults. When I started at Los Angeles City College back in 2017, I noticed that video games were nonexistent on the campus. I believe that gaming plays a vital role in every student's education.</p>
+
+        <p>Most students who attend community colleges spend most of their time on the campus alone. They haven't made many friends and they're most likely looking for a place where they can fit in. Incorporating video games in school will help students find a circle of friends who they share similar interests with.</p>
+
+        <p>With many video games supporting multiple players such as "Super Smash Bros" and "Mario Kart", they force gamers into a social environment where they must communicate with their fellow teammates. This not only helps with their verbal skills but also their interpersonal skills. Even if the teammates don't know each other, a long-lasting friendship can easily stem from simply playing a game together.</p>
+
+        <p>I'm sure many can agree with me when I say "school is stressful, tedious and a little boring." With the help of video games, students can take their minds off of the stresses of school and focus on fun things like, "who's gonna be tank and who's gonna be healer in Overwatch."</p>
+
+        <p>Everyone needs to be a part of a like-minded crowd in order to feel like they belong. I think a video game lounge in The Student Union would be a huge help. This would not only bring students together but it would also help combat depression and antisocial disorder.</p>
+    </div>
+    
+    <div id="article5-content" style="display: none;">
+        <img src="img/videogameviolence.png" alt="Digital Worlds with Real World Consequences" class="img-fluid mb-3">
+        <h2 class="text-primary article-title">Digital Worlds with Real World Consequences</h2>
+        <div class="card bg-dark text-light mb-3 border-primary">
+            <div class="card-body text-center">
+                <p class="mb-0"><strong>Published on:</strong> June 1, 2023</p>
+                <p class="mb-0"><strong>Author:</strong> Damien Hosea</p>
+            </div>
+        </div>
+        
+        <p>Video Games are an electronic game that requires interaction from the player using an input device such as a joystick, keyboard or controller. Video games allow players to take the role of various different characters such as a sword wielding warrior in a 1 player game, or a gun blazing soldier in a team of 6. With the rising popularity of video games comes the concern that they do more harm than good.</p>
+
+        <p>In this essay, I will discuss violence in video games. There have been many mixed results from research surrounding violent video games and their linked to increased aggression, decreased empathy and its ability to desensitize players to real-world violence. I will then talk about mass shootings in the US and their link to violent video games.  Next, I will discuss the benefits of playing video games and how video games are being used as a scapegoat to avoid facing a much larger issue within the United States.</p>
+
+        <p>In the US and Canada, the Entertainment Software Rating Board(ESRB) is an organization that assigns age and content ratings for consumers of video games. Ranging from rating E standing for "Everyone" up to M which stands for "Mature". Mature rating games are said to be suitable for teens because they contain intense violence, blood and gore, sexual content and/or strong language.</p>
+
+        <p>Grand Theft Auto is an open-world role playing game that is rated M for Mature. The player takes control of where the player controls 3 main characters as they complete various missions set in a fictitious city of Los Angeles. The main storyline begins with the player robbing a bank and stealing money. After a long and heated shootout with the police, you make a get away with all the stolen money. To any person learning about this game for the first time would be so excited yet enthralled by the idea of being able to play out a bank robbery. Given the content of this game, it can be very easy to make the claim that "exposing children to this type of interactive media can make someone violent". However, video games aren't to blame for people committing crimes in real life.</p>
+
+        <p>In Conclusion, video games do indeed contain violence and have the potential to increase aggression but they don't cause mass shootings. The minimal aggression that gaming can cause isn't enough to influence harm to people in the real-world. Using video games as a justification to commit crimes is a clear indication of avoiding the harsh realities of terrorism in the United States. Dealing with guns would have a much greater effect than regulating video game content.</p>
     </div>
 </body>
 </html>

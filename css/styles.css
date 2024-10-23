@@ -1088,3 +1088,43 @@ body {
     object-fit: cover;
 }
 
+.modal-body {
+    padding-top: 20px; /* Adds space at the top of the modal */
+}
+
+.modal-body img {
+    margin-bottom: 20px; /* Adds space between the image and the title */
+}
+
+.article-title {
+    text-align: center; /* Centers the title */
+    margin-top: 20px; /* Adds additional space above the title */
+}
+
+/* Styles for article cards */
+.card-img-top {
+    height: 250px; /* Adjust this value as needed */
+    object-fit: cover;
+}
+
+.card {
+    height: 100%;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-text {
+    flex-grow: 1;
+}
+
+.border-primary {
+    border-color: #4a90e2 !important; /* Replace with your desired color */
+}
+
+/* Add this new rule */
+.modal-body img {
+    padding: 15px;
+}

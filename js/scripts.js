@@ -90,5 +90,13 @@ $(function(){
             modal.find('.modal-title').text(title);
             modal.find('.modal-body').html(content);
         });
+
+        $('.read-more').on('click', function() {
+            var title = $(this).data('title');
+            var contentId = $(this).data('content-id');
+            $('#articleModal .modal-title').text(title);
+            $('#articleModal .modal-body').html($('#' + contentId).html());
+        });
     });
 });
+
