@@ -1128,3 +1128,71 @@ body {
 .modal-body img {
     padding: 15px;
 }
+
+.fab.fa-python { color: #3776AB; }
+.fab.fa-js-square { color: #F7DF1E; }
+.fab.fa-html5 { color: #E34F26; }
+.fas.fa-code { color: #00599C; }
+.fab.fa-microsoft { color: #5E5E5E; }
+.fab.fa-java { color: #007396; }
+.fab.fa-microsoft.csharp { color: #68217A; }
+
+@keyframes colorChange {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+.skill-icon {
+    animation: colorChange 5s linear infinite;
+}
+
+.stat-label i {
+    margin-right: 10px;
+}
+
+@keyframes progressAnimation {
+    0% { width: 0; }
+}
+
+.progress-bar {
+    animation: progressAnimation 1.5s ease-in-out forwards;
+}
+
+.progress {
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    height: 25px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    border-radius: 20px;
+    position: relative;
+}
+
+.progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient(
+        -45deg,
+        rgba(255, 255, 255, .2) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, .2) 50%,
+        rgba(255, 255, 255, .2) 75%,
+        transparent 75%,
+        transparent
+    );
+    background-size: 50px 50px;
+    animation: moveStripes 1s linear infinite;
+    z-index: 1;
+}
+
+@keyframes moveStripes {
+    0% { background-position: 0 0; }
+    100% { background-position: 50px 50px; }
+}

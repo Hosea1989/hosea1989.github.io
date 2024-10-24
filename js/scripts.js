@@ -97,6 +97,22 @@ $(function(){
             $('#articleModal .modal-title').text(title);
             $('#articleModal .modal-body').html($('#' + contentId).html());
         });
+
+        animateProgressBars();
+
+        // Particles.js initialization for skills page
+        if ($('#particles-js').length > 0) {
+            particlesJS.load('particles-js', 'assets/particles.json', function() {
+                console.log('particles.js loaded');
+            });
+        }
     });
 });
 
+function animateProgressBars() {
+    $('.progress-bar').each(function() {
+        var bar = $(this);
+        var width = bar.attr('aria-valuenow') + '%';
+        bar.css('width', width);
+    });
+}
