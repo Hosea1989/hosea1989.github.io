@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RekoGen - Anime Recommendation App | Damien Hosea</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="dark-theme">
+    <div id="header-placeholder"></div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero py-5 mb-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h1 class="display-4 fw-bold text-primary mb-3">
+                            <span class="glow-text glitch-text" data-text="レコゲン">RekoGen</span>
+                        </h1>
+                        <p class="lead text-light mb-4">
+                            The anime recommendation app that finally solves the "what should I watch next?" problem.
+                        </p>
+                        <p class="text-light mb-4">
+                            Built with Flutter and powered by three comprehensive anime APIs, RekoGen provides personalized recommendations based on your unique preferences and connects you with a community of fellow anime enthusiasts.
+                        </p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="https://testflight.apple.com/join/zqp2cVC6" target="_blank" class="btn btn-primary btn-lg">
+                                <i class="fas fa-mobile-alt me-2"></i>Join Beta (TestFlight)
+                            </a>
+                            <a href="#discord-link" class="btn btn-outline-primary btn-lg">
+                                <i class="fab fa-discord me-2"></i>Join Discord
+                            </a>
+                            <a href="https://github.com/yourusername/rekogen" target="_blank" class="btn btn-outline-secondary btn-lg">
+                                <i class="fab fa-github me-2"></i>View Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                        <img src="img/rekogen-browse-screen.jpg" alt="RekoGen App Screenshot" class="img-fluid rounded shadow-lg" style="max-height: 700px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem & Solution Section -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 mb-4">
+                        <div class="card bg-dark text-light h-100 border-danger">
+                            <div class="card-body">
+                                <h3 class="card-title text-danger mb-3">
+                                    <i class="fas fa-exclamation-triangle me-2"></i>The Problem
+                                </h3>
+                                <p class="card-text">
+                                    As an anime fan, I constantly struggled with the overwhelming question: "What should I watch next?" 
+                                    With thousands of anime series available across multiple platforms, finding something that matches 
+                                    your specific taste in genres, pacing, and mood can be incredibly frustrating.
+                                </p>
+                                <p class="card-text">
+                                    Existing recommendation systems are often too generic or don't account for the nuanced preferences 
+                                    that make anime enjoyment so personal.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <div class="card bg-dark text-light h-100 border-success">
+                            <div class="card-body">
+                                <h3 class="card-title text-success mb-3">
+                                    <i class="fas fa-lightbulb me-2"></i>The Solution
+                                </h3>
+                                <p class="card-text">
+                                    RekoGen solves this through a comprehensive onboarding quiz that analyzes your preferences 
+                                    across multiple dimensions - not just genres, but also pacing, themes, and viewing context.
+                                </p>
+                                <p class="card-text">
+                                    By combining data from three major anime APIs (Jikan, Kitsu, and AniList), RekoGen provides 
+                                    highly personalized recommendations while also connecting you with a community of like-minded fans.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5 text-primary">Key Features</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card bg-dark text-light h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-brain fa-3x text-primary mb-3"></i>
+                                <h4 class="card-title text-primary">Smart Discovery</h4>
+                                <p class="card-text">
+                                    Discover trending anime and current hype series with comprehensive ratings, 
+                                    genre tags, and detailed information from multiple anime databases.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card bg-dark text-light h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-database fa-3x text-primary mb-3"></i>
+                                <h4 class="card-title text-primary">Personal Tracking</h4>
+                                <p class="card-text">
+                                    Keep track of your anime journey with personal watchlists, completion status, 
+                                    and detailed anime information including episodes and ratings.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card bg-dark text-light h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-users fa-3x text-primary mb-3"></i>
+                                <h4 class="card-title text-primary">Community Realms</h4>
+                                <p class="card-text">
+                                    Join themed realms based on your favorite anime, connect with fans, 
+                                    and discover new series through community recommendations and discussions.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology Stack Section -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5 text-primary">Built With</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card bg-dark text-light">
+                            <div class="card-body">
+                                <div class="row text-center">
+                                    <div class="col-6 col-md-3 mb-3">
+                                        <i class="fab fa-google text-info mb-2" style="font-size: 3rem;"></i>
+                                        <h5 class="text-info">Flutter</h5>
+                                        <p class="small">Mobile Framework</p>
+                                    </div>
+                                    <div class="col-6 col-md-3 mb-3">
+                                        <i class="fas fa-server fa-3x text-warning mb-2"></i>
+                                        <h5 class="text-warning">Jikan API</h5>
+                                        <p class="small">MyAnimeList Data</p>
+                                    </div>
+                                    <div class="col-6 col-md-3 mb-3">
+                                        <i class="fas fa-database fa-3x text-success mb-2"></i>
+                                        <h5 class="text-success">Kitsu API</h5>
+                                        <p class="small">Anime Database</p>
+                                    </div>
+                                    <div class="col-6 col-md-3 mb-3">
+                                        <i class="fas fa-chart-line fa-3x text-danger mb-2"></i>
+                                        <h5 class="text-danger">AniList API</h5>
+                                        <p class="small">Community Data</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Screenshots Section -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5 text-primary">App Screenshots</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card bg-dark">
+                            <div class="screenshot-container" data-bs-toggle="modal" data-bs-target="#screenshotModal" data-screenshot="img/rekogen-community-feed.jpg" data-title="Community Realms">
+                                <img src="img/rekogen-community-feed.jpg" class="card-img-top screenshot-clickable" alt="Community Realms" style="object-fit: contain; background-color: #1a1a1a; min-height: 400px; cursor: pointer;">
+                                <div class="screenshot-overlay">
+                                    <i class="fas fa-search-plus"></i>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">Community Realms</h5>
+                                <p class="card-text text-light">Join trending realms and connect with fellow anime fans in themed communities.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card bg-dark">
+                            <div class="screenshot-container" data-bs-toggle="modal" data-bs-target="#screenshotModal" data-screenshot="img/rekogen-discovery.jpg" data-title="Smart Discovery">
+                                <img src="img/rekogen-discovery.jpg" class="card-img-top screenshot-clickable" alt="Anime Discovery" style="object-fit: contain; background-color: #1a1a1a; min-height: 400px; cursor: pointer;">
+                                <div class="screenshot-overlay">
+                                    <i class="fas fa-search-plus"></i>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">Smart Discovery</h5>
+                                <p class="card-text text-light">Discover current hype anime with ratings and comprehensive information.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card bg-dark">
+                            <div class="screenshot-container" data-bs-toggle="modal" data-bs-target="#screenshotModal" data-screenshot="img/rekogen-watchlist.jpg" data-title="Personal Tracking">
+                                <img src="img/rekogen-watchlist.jpg" class="card-img-top screenshot-clickable" alt="Personal Watchlist" style="object-fit: contain; background-color: #1a1a1a; min-height: 400px; cursor: pointer;">
+                                <div class="screenshot-overlay">
+                                    <i class="fas fa-search-plus"></i>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">Personal Tracking</h5>
+                                <p class="card-text text-light">Track your anime journey with personal watchlists and completion status.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Additional Screenshots Row -->
+                <div class="row mt-4">
+                    <div class="col-md-6 mb-4">
+                        <div class="card bg-dark">
+                            <div class="screenshot-container" data-bs-toggle="modal" data-bs-target="#screenshotModal" data-screenshot="img/rekogen-anime-detail.jpg" data-title="Detailed Anime Info">
+                                <img src="img/rekogen-anime-detail.jpg" class="card-img-top screenshot-clickable" alt="Anime Details" style="object-fit: contain; background-color: #1a1a1a; min-height: 400px; cursor: pointer;">
+                                <div class="screenshot-overlay">
+                                    <i class="fas fa-search-plus"></i>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">Detailed Anime Info</h5>
+                                <p class="card-text text-light">Rich anime information with videos, characters, and comprehensive details.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card bg-dark">
+                            <div class="screenshot-container" data-bs-toggle="modal" data-bs-target="#screenshotModal" data-screenshot="img/rekogen-anime-actions.jpg" data-title="Easy Actions">
+                                <img src="img/rekogen-anime-actions.jpg" class="card-img-top screenshot-clickable" alt="Anime Actions" style="object-fit: contain; background-color: #1a1a1a; min-height: 400px; cursor: pointer;">
+                                <div class="screenshot-overlay">
+                                    <i class="fas fa-search-plus"></i>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">Easy Actions</h5>
+                                <p class="card-text text-light">Add to watchlist, mark as complete, and manage your anime library effortlessly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Version & Roadmap Section -->
+        <section class="py-5 bg-gradient">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 mb-4">
+                        <div class="card bg-dark text-light h-100 border-primary">
+                            <div class="card-body">
+                                <h3 class="card-title text-primary mb-3">
+                                    <i class="fas fa-rocket me-2"></i>Current Version: 2.0.0
+                                </h3>
+                                <div class="mb-3">
+                                    <h5 class="text-success">✅ What's New This Update:</h5>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-rocket text-success me-2"></i><strong>Complete App Rebuild</strong> - Rebuilt from ground up with scalability in mind</li>
+                                        <li><i class="fas fa-users text-success me-2"></i><strong>Realms System</strong> - Replaced forums with new Realms for connecting anime fans</li>
+                                        <li><i class="fas fa-list text-success me-2"></i><strong>Enhanced Watchlists</strong> - Updated watchlist and completed lists with better UX</li>
+                                        <li><i class="fas fa-palette text-success me-2"></i><strong>UI Overhaul</strong> - Completely refreshed app design and user interface</li>
+                                        <li><i class="fas fa-database text-success me-2"></i><strong>Anime Repository</strong> - Expanded API integration for more comprehensive anime data</li>
+                                        <li><i class="fas fa-mobile-alt text-success me-2"></i><strong>iOS Platform</strong> - Available on iOS via TestFlight</li>
+                                        <li><i class="fas fa-search text-success me-2"></i><strong>Smart Discovery</strong> - Improved anime discovery and recommendation engine</li>
+                                        <li><i class="fas fa-filter text-success me-2"></i><strong>Advanced Filtering</strong> - Enhanced search and filtering capabilities</li>
+                                    </ul>
+                                </div>
+                                <div class="text-center">
+                                    <span class="badge bg-primary fs-6 px-3 py-2">
+                                        <i class="fas fa-users me-1"></i>20+ Active Users
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <div class="card bg-dark text-light h-100 border-warning">
+                            <div class="card-body">
+                                <h3 class="card-title text-warning mb-3">
+                                    <i class="fas fa-calendar-alt me-2"></i>Coming Soon
+                                </h3>
+                                <div class="roadmap-item mb-3">
+                                    <h5 class="text-info">🚀 Version 2.0.1 (Mid-June 2025)</h5>
+                                    <ul class="list-unstyled ms-3">
+                                        <li><i class="fas fa-android text-success me-2"></i>More updates to the Home Screen to help with loading times</li>
+                                        <li><i class="fas fa-star text-warning me-2"></i>Updating known issues with the app</li>
+                                        <li><i class="fas fa-star text-warning me-2"></i>Push notifications for new Realm posts</li>
+                                        <li><i class="fas fa-robot text-success me-2"></i>Signing in with Google (Coming Soon)</li>
+                                    </ul>
+                                </div>
+                                <div class="roadmap-item mb-3">
+                                    <h5 class="text-info">🎯 Version 2.0.2 (Late June 2025)</h5>
+                                    <ul class="list-unstyled ms-3">
+                                        <li><i class="fas fa-trophy text-gold me-2"></i>Achievement system: Recently removed from the app, but will be added back in the future</li>
+                                        <li><i class="fas fa-share text-info me-2"></i>More ways to connect with other users</li>
+                                        <li><i class="fas fa-chart-bar text-purple me-2"></i>Advanced analytics dashboard</li>
+                                        <li><i class="fas fa-robot text-success me-2"></i>More ways to recommend anime</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Comparison Section -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5 text-primary">How RekoGen Stands Out</h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="table-responsive">
+                            <table class="table table-dark table-striped table-hover border border-primary">
+                                <thead class="table-primary">
+                                    <tr>
+                                        <th scope="col" class="text-white">Feature</th>
+                                        <th scope="col" class="text-center text-white">RekoGen</th>
+                                        <th scope="col" class="text-center text-white">Anime-Planet</th>
+                                        <th scope="col" class="text-center text-white">AniList App</th>
+                                        <th scope="col" class="text-center text-white">Kitsu App</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong class="text-white">Multi-API Data Integration</strong></td>
+                                        <td class="text-center"><i class="fas fa-check text-success fs-4"></i></td>
+                                        <td class="text-center"><i class="fas fa-times text-danger fs-5"></i></td>
+                                        <td class="text-center"><i class="fas fa-times text-danger fs-5"></i></td>
+                                        <td class="text-center"><i class="fas fa-times text-danger fs-5"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong class="text-white">Community Realms</strong></td>
+                                        <td class="text-center"><i class="fas fa-check text-success fs-4"></i></td>
+                                        <td class="text-center"><i class="fas fa-minus text-warning fs-5"></i></td>
+                                        <td class="text-center"><i class="fas fa-minus text-warning fs-5"></i></td>
+                                        <td class="text-center"><i class="fas fa-times text-danger fs-5"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong class="text-white">Smart Recommendations</strong></td>
+                                        <td class="text-center"><i class="fas fa-check text-success fs-4"></i></td>
+                                        <td class="text-center"><i class="fas fa-check text-success fs-5"></i></td>
+                                        <td class="text-center"><i class="fas fa-check text-success fs-5"></i></td>
+                                        <td class="text-center"><i class="fas fa-minus text-warning fs-5"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong class="text-white">Mobile-First Design</strong></td>
+                                        <td class="text-center"><i class="fas fa-check text-success fs-4"></i></td>
+                                        <td class="text-center"><i class="fas fa-minus text-warning fs-5"></i></td>
+                                        <td class="text-center"><i class="fas fa-check text-success fs-5"></i></td>
+                                        <td class="text-center"><i class="fas fa-check text-success fs-5"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong class="text-white">Trending Discovery</strong></td>
+                                        <td class="text-center"><i class="fas fa-check text-success fs-4"></i></td>
+                                        <td class="text-center"><i class="fas fa-check text-success fs-5"></i></td>
+                                        <td class="text-center"><i class="fas fa-check text-success fs-5"></i></td>
+                                        <td class="text-center"><i class="fas fa-check text-success fs-5"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong class="text-white">Comprehensive Database</strong></td>
+                                        <td class="text-center"><i class="fas fa-check text-success fs-4"></i></td>
+                                        <td class="text-center"><i class="fas fa-check text-success fs-5"></i></td>
+                                        <td class="text-center"><i class="fas fa-check text-success fs-5"></i></td>
+                                        <td class="text-center"><i class="fas fa-minus text-warning fs-5"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong class="text-white">Modern UI/UX</strong></td>
+                                        <td class="text-center"><i class="fas fa-check text-success fs-4"></i></td>
+                                        <td class="text-center"><i class="fas fa-minus text-warning fs-5"></i></td>
+                                        <td class="text-center"><i class="fas fa-check text-success fs-5"></i></td>
+                                        <td class="text-center"><i class="fas fa-check text-success fs-5"></i></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="text-center mt-3">
+                            <small class="text-white">
+                                <i class="fas fa-check text-success"></i> Full Support &nbsp;&nbsp;
+                                <i class="fas fa-minus text-warning"></i> Partial Support &nbsp;&nbsp;
+                                <i class="fas fa-times text-danger"></i> Not Available
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Developer Insights Section -->
+        <section class="py-5 bg-gradient">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-center mb-4">
+                        <img src="img/damien-profile.jpg" alt="Damien Hosea" class="rounded-circle img-fluid mb-3" style="width: 200px; height: 200px; object-fit: cover; border: 3px solid #4a90e2;">
+                        <h4 class="text-white">Damien Hosea</h4>
+                        <p class="text-light">Creator & Lead Developer</p>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="card bg-dark text-light border-primary">
+                            <div class="card-body">
+                                <h3 class="card-title text-primary mb-3">
+                                    <i class="fas fa-heart me-2"></i>Why I Built RekoGen
+                                </h3>
+                                <p class="card-text mb-3 text-light">
+                                    As a lifelong anime fan, I've experienced the frustration of finishing an amazing series and 
+                                    spending hours trying to find something equally captivating. Existing platforms either had 
+                                    limited recommendations or didn't understand the nuanced preferences that make anime so personal.
+                                </p>
+                                <p class="card-text mb-3 text-light">
+                                    <strong class="text-info">The Technical Challenge:</strong> Building RekoGen required integrating 
+                                    three different anime APIs (Jikan, Kitsu, and AniList), each with unique data structures and 
+                                    rate limits. The real challenge was creating a unified experience that leverages the strengths 
+                                    of each platform while maintaining fast performance.
+                                </p>
+                                <p class="card-text mb-3 text-light">
+                                    <strong class="text-success">The Community Aspect:</strong> What started as a personal project 
+                                    evolved into something bigger when I realized other fans shared the same struggles. The community 
+                                    realms feature came from beta tester feedback - they wanted to connect with people who shared 
+                                    their specific anime interests.
+                                </p>
+                                <div class="row text-center mt-4">
+                                    <div class="col-4">
+                                        <h5 class="text-primary fw-bold">8+</h5>
+                                        <small class="text-white fw-semibold">Months Development</small>
+                                    </div>
+                                    <div class="col-4">
+                                        <h5 class="text-primary fw-bold">15,000+</h5>
+                                        <small class="text-white fw-semibold">Lines of Code</small>
+                                    </div>
+                                    <div class="col-4">
+                                        <h5 class="text-primary fw-bold">500+</h5>
+                                        <small class="text-white fw-semibold">Beta Testers</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5 text-primary">Frequently Asked Questions</h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="accordion accordion-dark" id="faqAccordion">
+                            <div class="accordion-item bg-dark border-secondary">
+                                <h2 class="accordion-header" id="faq1">
+                                    <button class="accordion-button bg-dark text-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                                        <i class="fas fa-mobile-alt me-2 text-primary"></i>
+                                        Is RekoGen available for Android?
+                                    </button>
+                                </h2>
+                                <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body text-light">
+                                        Currently, RekoGen is in beta for iOS via TestFlight. The Android version is planned for Q2 2024. 
+                                        Join our Discord to get notified when Android beta testing begins!
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item bg-dark border-secondary">
+                                <h2 class="accordion-header" id="faq2">
+                                    <button class="accordion-button bg-dark text-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                                        <i class="fas fa-database me-2 text-primary"></i>
+                                        How comprehensive is the anime database?
+                                    </button>
+                                </h2>
+                                <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body text-light">
+                                        RekoGen combines data from three major sources: Jikan (MyAnimeList), Kitsu, and AniList. 
+                                        This gives us access to over 50,000 anime titles with comprehensive information including 
+                                        ratings, genres, episode counts, and community discussions.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item bg-dark border-secondary">
+                                <h2 class="accordion-header" id="faq3">
+                                    <button class="accordion-button bg-dark text-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                                        <i class="fas fa-brain me-2 text-primary"></i>
+                                        How do the recommendations work?
+                                    </button>
+                                </h2>
+                                <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body text-light">
+                                        Our recommendation engine analyzes your viewing history, ratings, and preferences across 
+                                        multiple dimensions including genres, themes, pacing, and mood. We also factor in community 
+                                        trends and similar user preferences to suggest anime you're likely to enjoy.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item bg-dark border-secondary">
+                                <h2 class="accordion-header" id="faq4">
+                                    <button class="accordion-button bg-dark text-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+                                        <i class="fas fa-users me-2 text-primary"></i>
+                                        What are Community Realms?
+                                    </button>
+                                </h2>
+                                <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body text-light">
+                                        Community Realms are themed discussion spaces where fans can connect around specific anime, 
+                                        genres, or topics. Each realm has its own feed, recommendations, and community-driven content. 
+                                        It's like having specialized forums for every anime interest!
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item bg-dark border-secondary">
+                                <h2 class="accordion-header" id="faq5">
+                                    <button class="accordion-button bg-dark text-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
+                                        <i class="fas fa-shield-alt me-2 text-primary"></i>
+                                        Is my data safe and private?
+                                    </button>
+                                </h2>
+                                <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body text-light">
+                                        Absolutely! We only collect data necessary to provide recommendations and improve the app. 
+                                        Your viewing history and preferences are encrypted and never shared with third parties. 
+                                        You can export or delete your data at any time through the app settings.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item bg-dark border-secondary">
+                                <h2 class="accordion-header" id="faq6">
+                                    <button class="accordion-button bg-dark text-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6">
+                                        <i class="fas fa-dollar-sign me-2 text-primary"></i>
+                                        Will RekoGen always be free?
+                                    </button>
+                                </h2>
+                                <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body text-light">
+                                        The core features of RekoGen will always be free! We're exploring optional premium features 
+                                        like advanced analytics, early access to new features, and enhanced customization options. 
+                                        Any premium features will be clearly optional and won't affect the core experience.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Screenshot Modal -->
+        <div class="modal fade" id="screenshotModal" tabindex="-1" aria-labelledby="screenshotModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content bg-dark">
+                    <div class="modal-header border-secondary">
+                        <h5 class="modal-title text-primary" id="screenshotModalLabel">Screenshot</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img id="modalScreenshot" src="" alt="Screenshot" class="img-fluid rounded">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action Section -->
+        <section id="beta-signup" class="py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="mb-4 text-primary">Ready to Discover Your Next Favorite Anime?</h2>
+                        <p class="lead text-light mb-4">
+                            Join the RekoGen beta and be among the first to experience personalized anime recommendations 
+                            that actually understand your taste.
+                        </p>
+                        <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
+                            <a href="https://testflight.apple.com/join/zqp2cVC6" target="_blank" class="btn btn-primary btn-lg">
+                                <i class="fas fa-mobile-alt me-2"></i>Join TestFlight Beta
+                            </a>
+                            <a href="#" class="btn btn-outline-primary btn-lg">
+                                <i class="fab fa-discord me-2"></i>Join Our Discord
+                            </a>
+                        </div>
+                        <p class="text-light">
+                            <i class="fas fa-info-circle me-1"></i>
+                            Beta is currently available for iOS via TestFlight. Android version coming soon!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Back to Portfolio -->
+        <section class="py-3">
+            <div class="container text-center">
+                <a href="index.html" class="btn btn-outline-secondary">
+                    <i class="fas fa-arrow-left me-2"></i>Back to Portfolio
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery (needed for loading components) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/scripts.js"></script>
+    
+    <!-- Screenshot Modal Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Handle screenshot modal
+            const screenshotModal = document.getElementById('screenshotModal');
+            const modalScreenshot = document.getElementById('modalScreenshot');
+            const modalTitle = document.getElementById('screenshotModalLabel');
+            
+            screenshotModal.addEventListener('show.bs.modal', function (event) {
+                const button = event.relatedTarget;
+                const screenshot = button.getAttribute('data-screenshot');
+                const title = button.getAttribute('data-title');
+                
+                modalScreenshot.src = screenshot;
+                modalTitle.textContent = title;
+            });
+        });
+    </script>
+    
+    <!-- RekoGen glitch effect script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const glitchElement = document.querySelector('.glitch-text');
+            if (glitchElement) {
+                const englishText = 'RekoGen';
+                const japaneseText = 'レコゲン';
+                
+                setInterval(() => {
+                    // Switch to Japanese
+                    setTimeout(() => {
+                        glitchElement.textContent = japaneseText;
+                    }, 2000);
+                    
+                    // Switch back to English
+                    setTimeout(() => {
+                        glitchElement.textContent = englishText;
+                    }, 4000);
+                }, 4000);
+            }
+        });
+    </script>
+</body>
+</html> 

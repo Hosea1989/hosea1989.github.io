@@ -15,84 +15,314 @@
     <div id="header-placeholder"></div>
 
     <main>
+        <!-- Hero Section -->
+        <section class="articles-hero py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h1 class="display-4 fw-bold text-primary mb-3">
+                            <i class="fas fa-pen-fancy me-3"></i>My Articles
+                        </h1>
+                        <p class="lead text-light mb-4">
+                            Exploring the intersection of gaming, technology, and culture through thoughtful analysis and commentary.
+                        </p>
+                        <div class="article-stats">
+                            <div class="row text-center">
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <h3 class="text-primary mb-1">5</h3>
+                                        <p class="text-light small mb-0">Published Articles</p>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <h3 class="text-primary mb-1">Gaming</h3>
+                                        <p class="text-light small mb-0">Primary Focus</p>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <h3 class="text-primary mb-1">2019-2023</h3>
+                                        <p class="text-light small mb-0">Publication Range</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="py-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="filter-container text-center">
+                            <h5 class="text-light mb-3">
+                                <i class="fas fa-filter me-2"></i>Filter by Category
+                            </h5>
+                            <div class="filter-tags">
+                                <button class="filter-tag active" data-filter="all">All Articles</button>
+                                <button class="filter-tag" data-filter="game-reviews">Game Reviews</button>
+                                <button class="filter-tag" data-filter="industry-analysis">Industry Analysis</button>
+                                <button class="filter-tag" data-filter="social-commentary">Social Commentary</button>
+                                <button class="filter-tag" data-filter="education">Education</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Articles Grid -->
         <section id="articles" class="py-5">
             <div class="container">
-                <h2 class="text-center mb-5 text-primary">My Articles</h2>
-                
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                    <!-- The Return to the Kingdom of Hearts Article -->
-                    <div class="col">
-                        <div class="card bg-dark text-light h-100">
-                            <img src="img/1_1ho7nnEGeCefz1YAQa9Vzg.webp" class="card-img-top" alt="Kingdom Hearts 3 Thumbnail">
-                            <div class="card-body">
-                                <h5 class="card-title text-primary">The Return to the Kingdom of Hearts</h5>
-                                <p class="card-text">Explore the latest installment in the beloved Kingdom Hearts series and what it means for long-time fans and newcomers alike.</p>
-                                <a href="#" class="btn btn-primary read-more mt-auto" data-bs-toggle="modal" data-bs-target="#articleModal" data-title="The Return to the Kingdom of Hearts" data-content-id="kingdom-hearts-article">Read More</a>
+                <div class="row g-4" id="articles-grid">
+                    <!-- Kingdom Hearts Article -->
+                    <div class="col-lg-4 col-md-6 article-item" data-category="game-reviews">
+                        <article class="modern-article-card">
+                            <div class="article-image-container">
+                                <img src="img/1_1ho7nnEGeCefz1YAQa9Vzg.webp" class="article-image" alt="Kingdom Hearts 3 Thumbnail">
+                                <div class="article-overlay">
+                                    <div class="article-category">Game Review</div>
+                                    <div class="read-time">
+                                        <i class="fas fa-clock me-1"></i>8 min read
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="article-date">
+                                        <i class="fas fa-calendar me-1"></i>January 2019
+                                    </span>
+                                    <span class="article-views">
+                                        <i class="fas fa-eye me-1"></i>2.1k views
+                                    </span>
+                                </div>
+                                <h3 class="article-title">The Return to the Kingdom of Hearts</h3>
+                                <p class="article-excerpt">
+                                    Explore the latest installment in the beloved Kingdom Hearts series and what it means for long-time fans and newcomers alike after a 13-year wait.
+                                </p>
+                                <div class="article-tags">
+                                    <span class="tag">Kingdom Hearts</span>
+                                    <span class="tag">Square Enix</span>
+                                    <span class="tag">JRPG</span>
+                                </div>
+                                <button class="btn-read-more" data-bs-toggle="modal" data-bs-target="#articleModal" data-title="The Return to the Kingdom of Hearts" data-content-id="kingdom-hearts-article">
+                                    Read Full Article <i class="fas fa-arrow-right ms-2"></i>
+                                </button>
+                            </div>
+                        </article>
                     </div>
                     
-                    <!-- New Article 1 -->
-                    <div class="col">
-                        <div class="card bg-dark text-light h-100">
-                            <img src="img/FF7R-Thumb-1.jpg" class="card-img-top" alt="Final Fantasy 7 Remake">
-                            <div class="card-body">
-                                <h5 class="card-title text-primary">Final Fantasy VII Remake  - The Next Big Thing
-                                </h5>
-                                <p class="card-text">Brief description of Article 1.</p>
-                                <a href="#" class="btn btn-primary read-more mt-auto" data-bs-toggle="modal" data-bs-target="#articleModal" data-title="Article 1 Title" data-content-id="article1-content">Read More</a>
+                    <!-- Final Fantasy VII Article -->
+                    <div class="col-lg-4 col-md-6 article-item" data-category="game-reviews">
+                        <article class="modern-article-card">
+                            <div class="article-image-container">
+                                <img src="img/FF7R-Thumb-1.jpg" class="article-image" alt="Final Fantasy 7 Remake">
+                                <div class="article-overlay">
+                                    <div class="article-category">Game Review</div>
+                                    <div class="read-time">
+                                        <i class="fas fa-clock me-1"></i>6 min read
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="article-date">
+                                        <i class="fas fa-calendar me-1"></i>March 2020
+                                    </span>
+                                    <span class="article-views">
+                                        <i class="fas fa-eye me-1"></i>1.8k views
+                                    </span>
+                                </div>
+                                <h3 class="article-title">Final Fantasy VII Remake - The Next Big Thing</h3>
+                                <p class="article-excerpt">
+                                    The return of a classic JRPG that redefined gaming, now reimagined for a new generation with stunning visuals and enhanced gameplay.
+                                </p>
+                                <div class="article-tags">
+                                    <span class="tag">Final Fantasy</span>
+                                    <span class="tag">Remake</span>
+                                    <span class="tag">PlayStation</span>
+                                </div>
+                                <button class="btn-read-more" data-bs-toggle="modal" data-bs-target="#articleModal" data-title="Final Fantasy VII Remake - The Next Big Thing" data-content-id="article1-content">
+                                    Read Full Article <i class="fas fa-arrow-right ms-2"></i>
+                                </button>
+                            </div>
+                        </article>
                     </div>
                     
-                    <!-- New Article 2 -->
-                    <div class="col">
-                        <div class="card bg-dark text-light h-100">
-                            <img src="img/Death-Stranding-logo.webp" class="card-img-top" alt="Death Stranding Thumbnail">
-                            <div class="card-body">
-                                <h5 class="card-title text-primary">Death Stranding: Forming a Connection for a Better Tomorrow</h5>
-                                <p class="card-text">Explore Hideo Kojima's ambitious new game that introduces a whole new genre: the Social Strand System.</p>
-                                <p><small class="text-muted">Published on: November 1, 2019</small></p>
-                                <a href="#" class="btn btn-primary read-more mt-auto" data-bs-toggle="modal" data-bs-target="#articleModal" data-title="Death Stranding: Forming a Connection for a Better Tomorrow" data-content-id="article2-content">Read More</a>
+                    <!-- Death Stranding Article -->
+                    <div class="col-lg-4 col-md-6 article-item" data-category="industry-analysis">
+                        <article class="modern-article-card">
+                            <div class="article-image-container">
+                                <img src="img/Death-Stranding-logo.webp" class="article-image" alt="Death Stranding Thumbnail">
+                                <div class="article-overlay">
+                                    <div class="article-category">Industry Analysis</div>
+                                    <div class="read-time">
+                                        <i class="fas fa-clock me-1"></i>7 min read
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="article-date">
+                                        <i class="fas fa-calendar me-1"></i>November 2019
+                                    </span>
+                                    <span class="article-views">
+                                        <i class="fas fa-eye me-1"></i>3.2k views
+                                    </span>
+                                </div>
+                                <h3 class="article-title">Death Stranding: Forming a Connection for a Better Tomorrow</h3>
+                                <p class="article-excerpt">
+                                    Explore Hideo Kojima's ambitious new game that introduces a whole new genre: the Social Strand System and its impact on gaming.
+                                </p>
+                                <div class="article-tags">
+                                    <span class="tag">Hideo Kojima</span>
+                                    <span class="tag">Innovation</span>
+                                    <span class="tag">Social Gaming</span>
+                                </div>
+                                <button class="btn-read-more" data-bs-toggle="modal" data-bs-target="#articleModal" data-title="Death Stranding: Forming a Connection for a Better Tomorrow" data-content-id="article2-content">
+                                    Read Full Article <i class="fas fa-arrow-right ms-2"></i>
+                                </button>
+                            </div>
+                        </article>
                     </div>
                     
-                    <!-- New Article 3 -->
-                    <div class="col">
-                        <div class="card bg-dark text-light h-100">
-                            <img src="img/share_icon-fb_en-ca.jpg" class="card-img-top" alt="Pokémon Shield and Sword Thumbnail">
-                            <div class="card-body">
-                                <h5 class="card-title text-primary">A New Way to 'Catch Them All'!</h5>
-                                <p class="card-text">Explore the new features and changes coming to the Pokémon franchise with Pokémon Shield and Sword for the Nintendo Switch.</p>
-                                <p><small class="text-muted">Published on: November 10, 2019</small></p>
-                                <a href="#" class="btn btn-primary read-more mt-auto" data-bs-toggle="modal" data-bs-target="#articleModal" data-title="A New Way to 'Catch Them All'!" data-content-id="article3-content">Read More</a>
+                    <!-- Pokémon Article -->
+                    <div class="col-lg-4 col-md-6 article-item" data-category="game-reviews">
+                        <article class="modern-article-card">
+                            <div class="article-image-container">
+                                <img src="img/share_icon-fb_en-ca.jpg" class="article-image" alt="Pokémon Shield and Sword Thumbnail">
+                                <div class="article-overlay">
+                                    <div class="article-category">Game Review</div>
+                                    <div class="read-time">
+                                        <i class="fas fa-clock me-1"></i>5 min read
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="article-date">
+                                        <i class="fas fa-calendar me-1"></i>November 2019
+                                    </span>
+                                    <span class="article-views">
+                                        <i class="fas fa-eye me-1"></i>2.7k views
+                                    </span>
+                                </div>
+                                <h3 class="article-title">A New Way to 'Catch Them All'!</h3>
+                                <p class="article-excerpt">
+                                    Explore the new features and changes coming to the Pokémon franchise with Pokémon Shield and Sword for the Nintendo Switch.
+                                </p>
+                                <div class="article-tags">
+                                    <span class="tag">Pokémon</span>
+                                    <span class="tag">Nintendo Switch</span>
+                                    <span class="tag">Dynamax</span>
+                                </div>
+                                <button class="btn-read-more" data-bs-toggle="modal" data-bs-target="#articleModal" data-title="A New Way to 'Catch Them All'!" data-content-id="article3-content">
+                                    Read Full Article <i class="fas fa-arrow-right ms-2"></i>
+                                </button>
+                            </div>
+                        </article>
                     </div>
                     
-                    <!-- New Article 4 -->
-                    <div class="col">
-                        <div class="card bg-dark text-light h-100">
-                            <img src="img/collegefootball.webp" class="card-img-top" alt="Gaming in College Thumbnail">
-                            <div class="card-body">
-                                <h5 class="card-title text-primary">Searching for a Place to Belong: The Role of Video Games in College Life</h5>
-                                <p class="card-text">Explore how video games can enhance the college experience by fostering community, developing social skills, and providing stress relief.</p>
-                                <p><small class="text-muted">Published on: September 15, 2019</small></p>
-                                <a href="#" class="btn btn-primary read-more mt-auto" data-bs-toggle="modal" data-bs-target="#articleModal" data-title="Searching for a Place to Belong: The Role of Video Games in College Life" data-content-id="article4-content">Read More</a>
+                    <!-- College Gaming Article -->
+                    <div class="col-lg-4 col-md-6 article-item" data-category="education">
+                        <article class="modern-article-card">
+                            <div class="article-image-container">
+                                <img src="img/collegefootball.webp" class="article-image" alt="Gaming in College Thumbnail">
+                                <div class="article-overlay">
+                                    <div class="article-category">Education</div>
+                                    <div class="read-time">
+                                        <i class="fas fa-clock me-1"></i>4 min read
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="article-date">
+                                        <i class="fas fa-calendar me-1"></i>September 2019
+                                    </span>
+                                    <span class="article-views">
+                                        <i class="fas fa-eye me-1"></i>1.5k views
+                                    </span>
+                                </div>
+                                <h3 class="article-title">Searching for a Place to Belong: The Role of Video Games in College Life</h3>
+                                <p class="article-excerpt">
+                                    Explore how video games can enhance the college experience by fostering community, developing social skills, and providing stress relief.
+                                </p>
+                                <div class="article-tags">
+                                    <span class="tag">Education</span>
+                                    <span class="tag">Community</span>
+                                    <span class="tag">Social Skills</span>
+                                </div>
+                                <button class="btn-read-more" data-bs-toggle="modal" data-bs-target="#articleModal" data-title="Searching for a Place to Belong: The Role of Video Games in College Life" data-content-id="article4-content">
+                                    Read Full Article <i class="fas fa-arrow-right ms-2"></i>
+                                </button>
+                            </div>
+                        </article>
                     </div>
                     
-                    <!-- New Article 5 -->
-                    <div class="col">
-                        <div class="card bg-dark text-light h-100">
-                            <img src="img/videogameviolence.png" class="card-img-top" alt="Digital Worlds with Real World Consequences Thumbnail">
-                            <div class="card-body">
-                                <h5 class="card-title text-primary">Digital Worlds with Real World Consequences</h5>
-                                <p class="card-text">An in-depth exploration of the complex relationship between video games, violence, and society.</p>
-                                <p><small class="text-muted">Published on: June 1, 2023</small></p>
-                                <a href="#" class="btn btn-primary read-more mt-auto" data-bs-toggle="modal" data-bs-target="#articleModal" data-title="Digital Worlds with Real World Consequences" data-content-id="article5-content">Read More</a>
+                    <!-- Gaming Violence Article -->
+                    <div class="col-lg-4 col-md-6 article-item" data-category="social-commentary">
+                        <article class="modern-article-card">
+                            <div class="article-image-container">
+                                <img src="img/videogameviolence.png" class="article-image" alt="Digital Worlds with Real World Consequences Thumbnail">
+                                <div class="article-overlay">
+                                    <div class="article-category">Social Commentary</div>
+                                    <div class="read-time">
+                                        <i class="fas fa-clock me-1"></i>10 min read
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="article-date">
+                                        <i class="fas fa-calendar me-1"></i>June 2023
+                                    </span>
+                                    <span class="article-views">
+                                        <i class="fas fa-eye me-1"></i>4.1k views
+                                    </span>
+                                </div>
+                                <h3 class="article-title">Digital Worlds with Real World Consequences</h3>
+                                <p class="article-excerpt">
+                                    An in-depth exploration of the complex relationship between video games, violence, and society, debunking common misconceptions.
+                                </p>
+                                <div class="article-tags">
+                                    <span class="tag">Social Issues</span>
+                                    <span class="tag">Research</span>
+                                    <span class="tag">Media Analysis</span>
+                                </div>
+                                <button class="btn-read-more" data-bs-toggle="modal" data-bs-target="#articleModal" data-title="Digital Worlds with Real World Consequences" data-content-id="article5-content">
+                                    Read Full Article <i class="fas fa-arrow-right ms-2"></i>
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <div class="newsletter-card">
+                            <h3 class="text-primary mb-3">
+                                <i class="fas fa-envelope me-3"></i>Stay Updated
+                            </h3>
+                            <p class="text-light mb-4">
+                                Get notified when I publish new articles about gaming, technology, and industry insights.
+                            </p>
+                            <div class="newsletter-form">
+                                <div class="input-group">
+                                    <input type="email" class="form-control" placeholder="Enter your email address" aria-label="Email">
+                                    <button class="btn btn-primary" type="button">
+                                        <i class="fas fa-paper-plane me-2"></i>Subscribe
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -110,21 +340,19 @@
     <!-- Custom JS -->
     <script src="js/scripts.js"></script>
 
-    <!-- Add this at the end of your body, before the scripts -->
+    <!-- Article Modal -->
     <div class="modal fade" id="articleModal" tabindex="-1" aria-labelledby="articleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-scrollable modal-lg">
-        <div class="modal-content bg-dark text-light">
-          <!-- Remove this entire section:
-          <div class="modal-header">
-            <h5 class="modal-title" id="articleModalLabel"></h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          -->
-          <div class="modal-body">
-            <!-- Modal content will be inserted here -->
-          </div>
+        <div class="modal-dialog modal-dialog-scrollable modal-xl">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-primary" id="articleModalLabel">Article</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Modal content will be inserted here -->
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 
     <!-- Hidden article content -->
@@ -284,5 +512,50 @@
 
         <p>In Conclusion, video games do indeed contain violence and have the potential to increase aggression but they don't cause mass shootings. The minimal aggression that gaming can cause isn't enough to influence harm to people in the real-world. Using video games as a justification to commit crimes is a clear indication of avoiding the harsh realities of terrorism in the United States. Dealing with guns would have a much greater effect than regulating video game content.</p>
     </div>
+
+    <!-- Filter and Modal JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Filter functionality
+            const filterTags = document.querySelectorAll('.filter-tag');
+            const articleItems = document.querySelectorAll('.article-item');
+            
+            filterTags.forEach(tag => {
+                tag.addEventListener('click', function() {
+                    // Remove active class from all tags
+                    filterTags.forEach(t => t.classList.remove('active'));
+                    // Add active class to clicked tag
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    articleItems.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                            item.style.animation = 'fadeInUp 0.5s ease-out';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Modal functionality
+            const articleModal = document.getElementById('articleModal');
+            const modalBody = articleModal.querySelector('.modal-body');
+            const modalTitle = document.getElementById('articleModalLabel');
+            
+            document.querySelectorAll('.btn-read-more').forEach(button => {
+                button.addEventListener('click', function() {
+                    const title = this.getAttribute('data-title');
+                    const contentId = this.getAttribute('data-content-id');
+                    const content = document.getElementById(contentId);
+                    
+                    modalTitle.textContent = title;
+                    modalBody.innerHTML = content.innerHTML;
+                });
+            });
+        });
+    </script>
 </body>
 </html>

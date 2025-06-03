@@ -10,105 +10,259 @@
     <link rel="stylesheet" href="css/styles.css">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <!-- Typed.js for text animation -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <!-- Particles.js -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body class="dark-theme">
     <div id="header-placeholder"></div>
 
-    <!-- Add this button and panel structure just after the header placeholder -->
-    <div id="game-corner-container">
-        <div id="game-corner-panel" class="game-corner-panel">
-            <div class="game-logo-container">
-                <img src="img/Overwatch_circle_logo.svg.png" alt="Current Game Logo" class="game-logo">
+    <!-- Survey Banner -->
+    <div class="survey-banner">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-9">
+                    <span class="survey-text">
+                        <i class="fas fa-lightbulb me-2"></i>
+                        <strong>Building my next app! </strong>  Help me create something you'd actually use - your input shapes what gets built next.
+                    </span>
+                </div>
+                <div class="col-md-3 text-end">
+                    <a href="https://docs.google.com/forms/d/11Qbv2eUtGO98DuOYU8zccBPXNfdVjkgvavPhq6Ol9fY/preview" target="_blank" class="btn btn-survey btn-sm">
+                        <i class="fas fa-poll me-1"></i>Share Your Ideas
+                    </a>
+                </div>
             </div>
-            <h4 id="game-title">Overwatch 2</h4>
-            <p id="game-description">A team-based action game set in an optimistic future.</p>
-            
-            <h5 class="mt-4">My Main Heroes</h5>
-            <div class="hero-images">
-                <img src="img/ana.png" alt="Ana" class="hero-img">
-                <img src="img/kiriko.png" alt="Kiriko" class="hero-img">
-                <img src="img/moira.png" alt="Moira" class="hero-img">
-            </div>
-            
-            <h5 class="mt-4">Add Me</h5>
-            <p>PlayStation Network: <strong id="psn-id">ZamnZamien</strong></p>
-            <button class="btn btn-sm btn-outline-primary copy-btn" data-copy-target="psn-id">Copy PSN ID</button>
-            <p>Blizzard.net: <strong id="blizzard-id">zamnzamien#1917</strong></p>
-            <button class="btn btn-sm btn-outline-primary copy-btn" data-copy-target="blizzard-id">Copy Blizzard.net ID</button>
-            
-            <div class="mt-4">
-                <a href="https://www.overbuff.com/players/ZamnZamien-1917" target="_blank" class="btn btn-info mb-3">My Overbuff Profile</a>
-            </div>
-            
-            <div class="mt-2">
-                <a href="https://discord.gg/m5yK2gE8" target="_blank" class="btn btn-primary mb-3">Join my Discord</a>
-            </div>
-        </div>
-        <div id="game-corner-button" class="game-corner-button">
-            Game Tab <i class="fas fa-gamepad"></i>
         </div>
     </div>
 
     <main>
-        <!-- Hero Section -->
-        <section class="hero py-5 shadow-lg">
+        <!-- Enhanced Hero Section -->
+        <section class="modern-hero">
             <div id="particles-js"></div>
             <div class="hero-background"></div>
-            <div class="hero-content">
-                <h1 class="display-4 fw-bold text-primary mb-3">
-                    <span class="glow-text">Welcome</span>
-                </h1>
-                <p class="lead text-light mb-4">I'm <span id="typed-text"></span></p>
+            <div class="container">
+                <div class="row align-items-center min-vh-100">
+                    <div class="col-lg-6">
+                        <div class="hero-content">
+                            <div class="hero-badge mb-3">
+                                <i class="fas fa-code me-2"></i>
+                                <span>Developer & Creator</span>
+                            </div>
+                            <h1 class="hero-title mb-4">
+                                <span class="text-light">Hi, I'm</span>
+                                <span class="text-primary d-block">Damien Hosea</span>
+                            </h1>
+                            <p class="hero-description text-light mb-4">
+                                Passionate developer creating innovative mobile apps, web applications, and games. 
+                                Currently building <strong class="text-primary">RekoGen</strong> - an AI-powered anime recommendation app.
+                            </p>
+                            <div class="hero-actions">
+                                <a href="#featured-projects" class="btn btn-primary btn-lg me-3">
+                                    <i class="fas fa-rocket me-2"></i>View My Work
+                                </a>
+                                <a href="contact.html" class="btn btn-outline-primary btn-lg">
+                                    <i class="fas fa-envelope me-2"></i>Get In Touch
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="hero-visual">
+                            <div class="hero-image-container">
+                                <div class="floating-elements">
+                                    <div class="floating-icon" style="--delay: 0s;">
+                                        <i class="fab fa-flutter"></i>
+                                    </div>
+                                    <div class="floating-icon" style="--delay: 1s;">
+                                        <i class="fab fa-react"></i>
+                                    </div>
+                                    <div class="floating-icon" style="--delay: 2s;">
+                                        <i class="fab fa-python"></i>
+                                    </div>
+                                    <div class="floating-icon" style="--delay: 3s;">
+                                        <i class="fab fa-js-square"></i>
+                                    </div>
+                                    <div class="floating-icon" style="--delay: 4s;">
+                                        <i class="fab fa-unity"></i>
+                                    </div>
+                                </div>
+                                <div class="hero-main-visual">
+                                    <i class="fas fa-laptop-code"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Featured Projects Section -->
-        <section id="featured-projects" class="featured-projects py-5">
+        <section id="featured-projects" class="featured-projects-modern py-5">
             <div class="container">
-                <h2 class="text-center mb-4 text-primary">Featured Projects</h2>
-                <div class="row" id="featured-projects-container">
+                <div class="section-header text-center mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-star me-3"></i>Featured Projects
+                    </h2>
+                    <p class="section-subtitle text-light">
+                        Showcasing my latest and most innovative work
+                    </p>
+                </div>
+                <div class="row g-4" id="featured-projects-container">
                     <!-- Projects will be dynamically inserted here -->
                 </div>
+                <div class="text-center mt-5">
+                    <a href="projects.html" class="btn btn-outline-primary btn-lg">
+                        <i class="fas fa-folder-open me-2"></i>View All Projects
+                    </a>
+                </div>
             </div>
         </section>
 
-
-        <!-- Favorite Developer Tools Section -->
-        <section class="developer-tools py-5">
+        <!-- Skills Overview Section -->
+        <section class="skills-overview py-5">
             <div class="container">
-                <h2 class="text-center mb-4 text-primary">My Favorite Developer Tools</h2>
-                <div class="row">
-                    <div class="col-md-4 mb-4">
-                        <div class="card bg-dark text-light h-100">
-                            <img src="img/intellij.png" class="card-img-top" alt="IntelliJ IDEA">
-                            <div class="card-body">
-                                <h4 class="card-title text-primary">IntelliJ IDEA</h4>
-                                <p class="card-text">A powerful IDE for Java development with advanced code analysis, refactoring tools, and seamless integration with various frameworks. Its smart code completion and debugging features significantly boost productivity.</p>
-                                <a href="https://www.jetbrains.com/idea/" target="_blank" class="btn btn-outline-primary mt-2">Learn More</a>
+                <div class="section-header text-center mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-cogs me-3"></i>Technical Expertise
+                    </h2>
+                    <p class="section-subtitle text-light">
+                        Technologies and tools I use to bring ideas to life
+                    </p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="skill-category-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h4>Mobile Development</h4>
+                            <p>Flutter, Dart, iOS, Android</p>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Flutter</span>
+                                <span class="skill-tag">Dart</span>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card bg-dark text-light h-100">
-                            <img src="img/vscode.png" class="card-img-top" alt="Visual Studio Code">
-                            <div class="card-body">
-                                <h4 class="card-title text-primary">Visual Studio Code</h4>
-                                <p class="card-text">A lightweight yet powerful source code editor that supports a wide range of programming languages. With its extensive marketplace of extensions, integrated Git control, and debugging tools, VS Code offers a highly customizable development environment.</p>
-                                <a href="https://code.visualstudio.com/" target="_blank" class="btn btn-outline-primary mt-2">Learn More</a>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="skill-category-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <h4>Web Development</h4>
+                            <p>React, JavaScript, HTML/CSS</p>
+                            <div class="skill-tags">
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">JavaScript</span>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card bg-dark text-light h-100">
-                            <img src="img/unity.png" class="card-img-top" alt="Unity">
-                            <div class="card-body">
-                                <h4 class="card-title text-primary">Unity</h4>
-                                <p class="card-text">A versatile game development engine for creating both 2D and 3D games. Unity offers a user-friendly interface, a powerful physics engine, and cross-platform deployment capabilities. Its extensive asset store and active community make it an excellent choice for game developers of all skill levels.</p>
-                                <a href="https://unity.com/" target="_blank" class="btn btn-outline-primary mt-2">Learn More</a>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="skill-category-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-gamepad"></i>
+                            </div>
+                            <h4>Game Development</h4>
+                            <p>Unity, C#, Game Design</p>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Unity</span>
+                                <span class="skill-tag">C#</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="skill-category-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h4>AI Integration</h4>
+                            <p>API Development, Machine Learning</p>
+                            <div class="skill-tags">
+                                <span class="skill-tag">APIs</span>
+                                <span class="skill-tag">AI Tools</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-5">
+                    <a href="skills.html" class="btn btn-outline-primary btn-lg">
+                        <i class="fas fa-chart-bar me-2"></i>View All Skills
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Developer Tools Section -->
+        <section class="developer-tools-modern py-5">
+            <div class="container">
+                <div class="section-header text-center mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-tools me-3"></i>My Development Arsenal
+                    </h2>
+                    <p class="section-subtitle text-light">
+                        The tools and technologies that power my development workflow
+                    </p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="tool-card">
+                            <div class="tool-image">
+                                <img src="img/intellij.png" alt="IntelliJ IDEA">
+                            </div>
+                            <div class="tool-content">
+                                <h4 class="tool-title">IntelliJ IDEA</h4>
+                                <p class="tool-description">
+                                    Powerful IDE for Java development with advanced code analysis and debugging features.
+                                </p>
+                                <div class="tool-features">
+                                    <span class="feature-tag">Smart Completion</span>
+                                    <span class="feature-tag">Refactoring</span>
+                                    <span class="feature-tag">Debugging</span>
+                                </div>
+                                <a href="https://www.jetbrains.com/idea/" target="_blank" class="tool-link">
+                                    <i class="fas fa-external-link-alt me-2"></i>Learn More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="tool-card">
+                            <div class="tool-image">
+                                <img src="img/vscode.png" alt="Visual Studio Code">
+                            </div>
+                            <div class="tool-content">
+                                <h4 class="tool-title">VS Code</h4>
+                                <p class="tool-description">
+                                    Lightweight yet powerful editor with extensive extensions and integrated Git control.
+                                </p>
+                                <div class="tool-features">
+                                    <span class="feature-tag">Extensions</span>
+                                    <span class="feature-tag">Git Integration</span>
+                                    <span class="feature-tag">Multi-language</span>
+                                </div>
+                                <a href="https://code.visualstudio.com/" target="_blank" class="tool-link">
+                                    <i class="fas fa-external-link-alt me-2"></i>Learn More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="tool-card">
+                            <div class="tool-image">
+                                <img src="img/unity.png" alt="Unity">
+                            </div>
+                            <div class="tool-content">
+                                <h4 class="tool-title">Unity</h4>
+                                <p class="tool-description">
+                                    Versatile game engine for 2D and 3D development with cross-platform deployment.
+                                </p>
+                                <div class="tool-features">
+                                    <span class="feature-tag">Cross-platform</span>
+                                    <span class="feature-tag">Asset Store</span>
+                                    <span class="feature-tag">Physics Engine</span>
+                                </div>
+                                <a href="https://unity.com/" target="_blank" class="tool-link">
+                                    <i class="fas fa-external-link-alt me-2"></i>Learn More
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -116,30 +270,75 @@
             </div>
         </section>
 
-        <!-- Favorite AI Tools Section -->
-        <section class="ai-tools py-5">
+        <!-- AI Tools Section -->
+        <section class="ai-tools-modern py-5">
             <div class="container">
-                <h2 class="text-center mb-4 text-primary">My Favorite AI Tools</h2>
-                <div class="row">
-                    <div class="col-md-6 mb-4">
-                        <div class="card bg-dark text-light h-100">
-                            <div class="card-img-top d-flex align-items-center justify-content-center" style="height: 200px; background-color: #343a40;">
-                                <img src="img/ChatGPT-Logo-768x432.png" alt="ChatGPT" style="max-width: 80%; max-height: 80%; object-fit: contain;">
+                <div class="section-header text-center mb-5">
+                    <h2 class="section-title">
+                        <i class="fas fa-brain me-3"></i>AI-Powered Development
+                    </h2>
+                    <p class="section-subtitle text-light">
+                        Leveraging artificial intelligence to enhance productivity and code quality
+                    </p>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-5 col-md-6">
+                        <div class="ai-tool-card">
+                            <div class="ai-tool-image">
+                                <img src="img/ChatGPT-Logo-768x432.png" alt="ChatGPT">
                             </div>
-                            <div class="card-body">
-                                <h4 class="card-title text-primary">ChatGPT</h4>
-                                <p class="card-text">An advanced language model by OpenAI that excels in natural language processing tasks. ChatGPT can assist with code explanation, debugging, and even generating code snippets, making it an invaluable tool for developers seeking quick insights or creative solutions.</p>
-                                <a href="https://chat.openai.com/" target="_blank" class="btn btn-outline-primary mt-2">Learn More</a>
+                            <div class="ai-tool-content">
+                                <h4 class="ai-tool-title">ChatGPT</h4>
+                                <p class="ai-tool-description">
+                                    Advanced language model for code explanation, debugging, and generating solutions.
+                                </p>
+                                <div class="ai-capabilities">
+                                    <div class="capability-item">
+                                        <i class="fas fa-code"></i>
+                                        <span>Code Generation</span>
+                                    </div>
+                                    <div class="capability-item">
+                                        <i class="fas fa-bug"></i>
+                                        <span>Debugging Help</span>
+                                    </div>
+                                    <div class="capability-item">
+                                        <i class="fas fa-lightbulb"></i>
+                                        <span>Problem Solving</span>
+                                    </div>
+                                </div>
+                                <a href="https://chat.openai.com/" target="_blank" class="ai-tool-link">
+                                    <i class="fas fa-external-link-alt me-2"></i>Try ChatGPT
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 mb-4">
-                        <div class="card bg-dark text-light h-100">
-                            <img src="img/Cursor-AI.png" class="card-img-top" alt="Cursor">
-                            <div class="card-body">
-                                <h4 class="card-title text-primary">Cursor</h4>
-                                <p class="card-text">An AI-powered code editor that combines the functionality of traditional IDEs with the power of large language models. Cursor offers features like intelligent code completion, refactoring suggestions, and natural language to code translation, enhancing developer productivity and code quality.</p>
-                                <a href="https://cursor.sh/" target="_blank" class="btn btn-outline-primary mt-2">Learn More</a>
+                    <div class="col-lg-5 col-md-6">
+                        <div class="ai-tool-card">
+                            <div class="ai-tool-image">
+                                <img src="img/Cursor-AI.png" alt="Cursor">
+                            </div>
+                            <div class="ai-tool-content">
+                                <h4 class="ai-tool-title">Cursor</h4>
+                                <p class="ai-tool-description">
+                                    AI-powered code editor with intelligent completion and natural language programming.
+                                </p>
+                                <div class="ai-capabilities">
+                                    <div class="capability-item">
+                                        <i class="fas fa-magic"></i>
+                                        <span>Smart Completion</span>
+                                    </div>
+                                    <div class="capability-item">
+                                        <i class="fas fa-comments"></i>
+                                        <span>Natural Language</span>
+                                    </div>
+                                    <div class="capability-item">
+                                        <i class="fas fa-sync-alt"></i>
+                                        <span>Code Refactoring</span>
+                                    </div>
+                                </div>
+                                <a href="https://cursor.sh/" target="_blank" class="ai-tool-link">
+                                    <i class="fas fa-external-link-alt me-2"></i>Try Cursor
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -148,10 +347,43 @@
         </section>
 
         <!-- Call to Action Section -->
-        <section class="cta py-5">
-            <div class="container text-center">
-                <h2 class="mb-4 text-primary">Interested in working together?</h2>
-                <a href="contact.html" class="btn btn-primary btn-lg">Hit Me Up!</a>
+        <section class="home-cta py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <div class="cta-card">
+                            <h2 class="cta-title mb-3">
+                                <i class="fas fa-handshake me-3"></i>Let's Build Something Amazing
+                            </h2>
+                            <p class="cta-description text-light mb-4">
+                                Ready to turn your ideas into reality? I'm passionate about creating innovative solutions 
+                                that make a difference. Let's collaborate and build the next big thing together.
+                            </p>
+                            <div class="cta-actions">
+                                <a href="contact.html" class="btn btn-primary btn-lg me-3">
+                                    <i class="fas fa-rocket me-2"></i>Start a Project
+                                </a>
+                                <a href="about.html" class="btn btn-outline-primary btn-lg">
+                                    <i class="fas fa-user me-2"></i>Learn About Me
+                                </a>
+                            </div>
+                            <div class="cta-social mt-4">
+                                <p class="text-light mb-3">Follow my journey</p>
+                                <div class="social-links">
+                                    <a href="https://www.linkedin.com/in/hoseadamien/" target="_blank" class="social-link">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                    <a href="https://github.com/Hosea1989" target="_blank" class="social-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://testflight.apple.com/join/zqp2cVC6" target="_blank" class="social-link">
+                                        <i class="fas fa-mobile-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -164,8 +396,35 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Custom JS -->
     <script src="js/scripts.js"></script>
-    <script src="js/current-game.js"></script>
     <script src="js/projects-data.js"></script>
     <script src="js/render-projects.js"></script>
+    
+    <!-- Smooth Scrolling Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    
+    <!-- Survey Banner Script -->
+    <script>
+        // Banner is now permanent - no close functionality needed
+        document.addEventListener('DOMContentLoaded', function() {
+            // Banner will always be visible
+            console.log('Survey banner loaded');
+        });
+    </script>
 </body>
 </html>
