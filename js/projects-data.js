@@ -17,5 +17,15 @@ const projects = [
         featured: true,
         type: "game"
     },
+    {
+        title: "Project Momentum",
+        description: "A personal finance and lifestyle tracking iOS app built with Flutter. Designed to help you build momentum in your personal growth through smart budgeting tools, habit tracking, and daily journaling. Take control of your finances, monitor your progress, and reflect on your journey all in one beautifully designed app.",
+        image: "img/project-momentum-thumbnail.png",
+        technologies: ["Flutter", "Dart", "iOS", "Firebase", "SQLite"],
+        githubLink: "https://github.com/yourusername/project-momentum",
+        appStoreLink: "#",
+        featured: true,
+        type: "mobile-app"
+    },
     // Add more projects here as needed
 ];
